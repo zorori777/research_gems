@@ -47,7 +47,7 @@
 |turbolinks|20|
 |sqlite3|20|
 |poltergeist|20|
-|json|19¥
+|json|19|
 |pry-byebug|19|
 |redcarpet|19|
 |byebug|19|
