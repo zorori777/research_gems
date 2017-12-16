@@ -46,32 +46,27 @@ gem 'mash'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
+# Call 'byebug' anywhere in the code to stop execution and get a debugger console
+gem 'byebug'
 
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
+# Access an IRB console on exception pages or by using <%= console %> in views
+gem 'web-console', '~> 2.0'
 
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+gem 'spring'
 
-  # testing
-  gem 'rspec-rails', '~> 3.0.0'
+# testing
+gem 'rspec-rails', '~> 3.0.0'
 
-  # model testing
-  gem 'shoulda-matchers', require: false
+# model testing
+gem 'shoulda-matchers', require: false
 
-  # integration testing
-  gem 'capybara'
+# integration testing
+gem 'capybara'
 
-  gem 'factory_girl_rails'
+gem 'factory_girl_rails'
 
-  gem 'simplecov', :require => false
-end
-
-group :development do
-  gem 'annotate'
-  gem 'better_errors'
-  gem 'binding_of_caller'
-end
+gem 'simplecov', :require => false
+gem 'annotate'
+gem 'better_errors'
+gem 'binding_of_caller'

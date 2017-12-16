@@ -10,58 +10,45 @@ gem 'rails', '>= 4.1.1'
 # Use unicorn as the web server
 # gem 'unicorn'
 
-group :development, :test do
-  gem "rspec-rails", ">= 2.13.1"
-  gem 'rspec-activemodel-mocks'
-  gem 'rspec-collection_matchers'
-  gem "launchy"
-  gem "fabrication"
-  unless ENV['TRAVIS']
-    if RUBY_VERSION >= '2.0.0'
-      gem 'byebug'
-    else
-      gem 'debugger'
-    end
+gem "rspec-rails", ">= 2.13.1"
+gem 'rspec-activemodel-mocks'
+gem 'rspec-collection_matchers'
+gem "launchy"
+gem "fabrication"
+unless ENV['TRAVIS']
+  if RUBY_VERSION >= '2.0.0'
+    gem 'byebug'
+  else
+    gem 'debugger'
   end
-  gem 'dotenv-rails'
 end
+gem 'dotenv-rails'
 
 
-group :test do
-  gem "simplecov"
-  gem 'spork'
-  gem "cucumber-rails", require: false
-  gem "capybara-webkit", '>= 1.0.0'
-  gem "capybara", '>= 2.2.0'
-  gem "growl"
-  gem "rb-fsevent"
-  gem "webrat"
+gem "simplecov"
+gem 'spork'
+gem "cucumber-rails", require: false
+gem "capybara-webkit", '>= 1.0.0'
+gem "capybara", '>= 2.2.0'
+gem "growl"
+gem "rb-fsevent"
+gem "webrat"
 
-  gem "database_cleaner", '>= 1.2.0'
-  gem "guard-rspec"
-  gem "guard-cucumber"
-  gem "guard-spork"
+gem "database_cleaner", '>= 1.2.0'
+gem "guard-rspec"
+gem "guard-cucumber"
+gem "guard-spork"
 
-  gem "minitest"
-end
-
-group :production do
-  gem "therubyracer", '>= 0.11.4'
-  gem 'libv8', '>= 3.11.8.12'
-  gem 'redis-rails'
-end
-
-platforms :ruby do
-  gem "mysql2"
-  gem 'sqlite3'
-  gem 'pg'
-end
-
-group :assets do
-  gem 'sass-rails'
-  gem 'coffee-rails'
-  gem 'uglifier'
-end
+gem "minitest"
+gem "therubyracer", '>= 0.11.4'
+gem 'libv8', '>= 3.11.8.12'
+gem 'redis-rails'
+gem "mysql2"
+gem 'sqlite3'
+gem 'pg'
+gem 'sass-rails'
+gem 'coffee-rails'
+gem 'uglifier'
 
 gem "i18n"
 

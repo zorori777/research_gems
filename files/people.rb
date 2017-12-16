@@ -69,44 +69,33 @@ gem 'react_webpack_rails'
 gem 'rake-progressbar'
 gem 'rack-cors', require: 'rack/cors'
 
-group :development do
-  gem 'better_errors'
-  gem 'binding_of_caller'
-  gem 'bullet'
-  gem 'gemsurance'
-  gem 'guard-rails'
-  gem 'guard-rspec'
-  gem 'guard-rubocop'
-  gem 'letter_opener'
-  gem 'quiet_assets'
-  gem 'spring-commands-rspec'
-end
-
-group :development, :test do
-  gem 'awesome_print'
-  gem 'capistrano-rvm', require: false
-  gem 'factory_girl_rails'
-  gem 'faker'
-  gem 'pry'
-  gem 'pry-byebug'
-  gem 'pry-rails'
-end
-
-group :test do
-  gem 'capybara'
-  gem 'capybara-screenshot'
-  gem 'capybara-webkit'
-  gem 'codeclimate-test-reporter', require: false
-  gem 'database_cleaner'
-  gem 'rack_session_access'
-  gem 'rspec-its'
-  gem 'rspec-rails'
-  gem 'selenium-webdriver'
-  gem 'shoulda'
-  gem 'site_prism'
-  gem 'timecop'
-end
-
-group :staging, :production do
-  gem 'lograge'
-end
+gem 'better_errors'
+gem 'binding_of_caller'
+gem 'bullet'
+gem 'gemsurance'
+gem 'guard-rails'
+gem 'guard-rspec'
+gem 'guard-rubocop'
+gem 'letter_opener'
+gem 'quiet_assets'
+gem 'spring-commands-rspec'
+gem 'awesome_print'
+gem 'capistrano-rvm', require: false
+gem 'factory_girl_rails'
+gem 'faker'
+gem 'pry'
+gem 'pry-byebug'
+gem 'pry-rails'
+gem 'capybara'
+gem 'capybara-screenshot'
+gem 'capybara-webkit'
+gem 'codeclimate-test-reporter', require: false
+gem 'database_cleaner'
+gem 'rack_session_access'
+gem 'rspec-its'
+gem 'rspec-rails'
+gem 'selenium-webdriver'
+gem 'shoulda'
+gem 'site_prism'
+gem 'timecop'
+gem 'lograge'

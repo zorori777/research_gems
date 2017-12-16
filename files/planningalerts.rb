@@ -66,46 +66,35 @@ gem 'mime-types', '~> 2.99' # our writeit gem version is incompatible with newer
 gem 'recaptcha', require: 'recaptcha/rails'
 gem 'rubocop', require: false
 
-group :test do
-  gem 'capybara'
-  gem 'poltergeist'
-  gem 'database_cleaner'
-  gem 'factory_girl_rails'
-  gem 'factory_girl'
-  gem 'email_spec', '~> 1.6'
-  gem 'coveralls', :require => false
-  gem 'vcr', '~> 2.9'
-  gem 'webmock'
-  gem 'timecop'
-  gem 'stripe-ruby-mock', '~> 2.3.1', :require => 'stripe_mock'
-end
-
-group :development do
-  gem 'guard'
-  gem 'listen', '< 3' # Used by guard. 3.0.0+ includes ruby_dep 1.5.0 which needs Ruby 2.2+
-  gem 'guard-rspec'
-  gem 'guard-livereload'
-  gem 'growl'
-  gem 'guard-rubocop'
-  gem 'rb-inotify', require: false
-  gem 'rack-livereload'
-  gem 'mailcatcher'
-  gem 'rb-fsevent'
-  gem 'rvm-capistrano'
-  gem "capistrano"
-  gem "better_errors"
-  gem "binding_of_caller"
-  gem "spring"
-  gem "spring-commands-rspec"
-  # FIXME: stop using `mock_model` and remove this
-  gem "rspec-activemodel-mocks"
-end
-
-group :test, :development do
-  gem 'rspec-rails', '~> 3'
-end
-
-group :production do
-  # Javascript runtime (required for precompiling assets in production)
-  gem 'therubyracer'
-end
+gem 'capybara'
+gem 'poltergeist'
+gem 'database_cleaner'
+gem 'factory_girl_rails'
+gem 'factory_girl'
+gem 'email_spec', '~> 1.6'
+gem 'coveralls', :require => false
+gem 'vcr', '~> 2.9'
+gem 'webmock'
+gem 'timecop'
+gem 'stripe-ruby-mock', '~> 2.3.1', :require => 'stripe_mock'
+gem 'guard'
+gem 'listen', '< 3' # Used by guard. 3.0.0+ includes ruby_dep 1.5.0 which needs Ruby 2.2+
+gem 'guard-rspec'
+gem 'guard-livereload'
+gem 'growl'
+gem 'guard-rubocop'
+gem 'rb-inotify', require: false
+gem 'rack-livereload'
+gem 'mailcatcher'
+gem 'rb-fsevent'
+gem 'rvm-capistrano'
+gem "capistrano"
+gem "better_errors"
+gem "binding_of_caller"
+gem "spring"
+gem "spring-commands-rspec"
+# FIXME: stop using `mock_model` and remove this
+gem "rspec-activemodel-mocks"
+gem 'rspec-rails', '~> 3'
+# Javascript runtime (required for precompiling assets in production)
+gem 'therubyracer'

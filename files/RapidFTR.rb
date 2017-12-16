@@ -39,30 +39,25 @@ gem 'timecop', '~> 0.7.1'
 gem 'delayed_job'
 gem 'delayed_job_couchrest_model', :git => 'https://github.com/andreweskeclarke/delayed_job_couchrest_model.git', :ref => '399d5325a55dcaf39d02c9659d5548a040d53746'
 
-group :development do
-  gem 'better_errors',     '~> 2.0'
-end
+gem 'better_errors',     '~> 2.0'
+gem 'factory_girl',       '~> 4.4.0'
+gem 'faker',              '~> 1.4.3'
 
-group :development, :test, :cucumber do
-  gem 'factory_girl',       '~> 4.4.0'
-  gem 'faker',              '~> 1.4.3'
+gem 'rspec',              '~> 3.0'
+gem 'rspec-rails',        '~> 3.0'
+gem 'rspec-activemodel-mocks', '~> 1.0.1'
 
-  gem 'rspec',              '~> 3.0'
-  gem 'rspec-rails',        '~> 3.0'
-  gem 'rspec-activemodel-mocks', '~> 1.0.1'
+gem 'capybara',           '~> 2.3'
+gem 'cucumber',           '~> 1.3.11'
+gem 'cucumber-rails',     '~> 1.4.0', :require => false
+gem 'selenium-webdriver', '~> 2.42.0'
+gem 'nokogiri',           '~> 1.6.3'
+gem 'json_spec',          '~> 1.1.2'
+gem 'pdf-inspector',      '~> 1.1.0'
+gem 'coveralls', :require => false
 
-  gem 'capybara',           '~> 2.3'
-  gem 'cucumber',           '~> 1.3.11'
-  gem 'cucumber-rails',     '~> 1.4.0', :require => false
-  gem 'selenium-webdriver', '~> 2.42.0'
-  gem 'nokogiri',           '~> 1.6.3'
-  gem 'json_spec',          '~> 1.1.2'
-  gem 'pdf-inspector',      '~> 1.1.0'
-  gem 'coveralls', :require => false
+gem 'pry-rails',          '~> 0.3.2', :platforms => :ruby
+gem 'quiet_assets',       '~> 1.0.3'
 
-  gem 'pry-rails',          '~> 0.3.2', :platforms => :ruby
-  gem 'quiet_assets',       '~> 1.0.3'
-
-  gem 'cane',               '~> 2.6.2'
-  gem 'rubocop',            '~> 0.25.0'
-end
+gem 'cane',               '~> 2.6.2'
+gem 'rubocop',            '~> 0.25.0'

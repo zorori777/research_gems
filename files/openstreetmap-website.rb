@@ -103,26 +103,17 @@ gem "canonical-rails"
 gem "logstasher"
 
 # Gems useful for development
-group :development do
-  gem "annotate"
-  gem "listen"
-  gem "vendorer"
-end
-
-# Gems needed for running tests
-group :test do
-  gem "minitest", "~> 5.1", :platforms => [:ruby_19, :ruby_20]
-  gem "rails-controller-testing"
-  gem "rubocop"
-  gem "webmock"
-end
-
+gem "annotate"
+gem "listen"
+gem "vendorer"
+gem "minitest", "~> 5.1", :platforms => [:ruby_19, :ruby_20]
+gem "rails-controller-testing"
+gem "rubocop"
+gem "webmock"
 # Needed in development as well so rake can see konacha tasks
-group :development, :test do
-  gem "capybara", "~> 2.13"
-  gem "coveralls", :require => false
-  gem "factory_bot_rails"
-  gem "jshint"
-  gem "poltergeist"
-  gem "puma", "~> 3.7"
-end
+gem "capybara", "~> 2.13"
+gem "coveralls", :require => false
+gem "factory_bot_rails"
+gem "jshint"
+gem "poltergeist"
+gem "puma", "~> 3.7"

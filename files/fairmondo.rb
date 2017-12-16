@@ -7,9 +7,9 @@ gem 'activerecord-session_store' # sessions in activerecord
 
 # Plattforms Ruby
 platforms :ruby do
-  gem 'sqlite3', group: :test # sqlite3 for inmemory testing db
-  gem 'therubyracer' # js runtime
-  gem 'pg', group: [:production, :staging, :development] # postgres
+gem 'sqlite3', group: :test # sqlite3 for inmemory testing db
+gem 'therubyracer' # js runtime
+gem 'pg', group: [:production, :staging, :development] # postgres
 end
 
 # ----------  Model ----------
@@ -120,91 +120,80 @@ gem 'paypal_adaptive'
 
 # ---------- Development ----------
 
-group :development do
-  # Better error messages
-  gem 'better_errors'
-  gem 'binding_of_caller'
+# Better error messages
+gem 'better_errors'
+gem 'binding_of_caller'
 
-  gem 'letter_opener' # emails in browser
+gem 'letter_opener' # emails in browser
 
-  # debugging in chrome with RailsPanel
-  gem 'meta_request'
+# debugging in chrome with RailsPanel
+gem 'meta_request'
 
-  # Quiet Assets to disable asset pipeline in log
-  gem 'quiet_assets'
+# Quiet Assets to disable asset pipeline in log
+gem 'quiet_assets'
 
-  # er diagramm generation
-  gem 'rails-erd'
-  gem 'thin' # Replace Webrick
+# er diagramm generation
+gem 'rails-erd'
+gem 'thin' # Replace Webrick
 
-  # Guard
-  gem 'guard'
-  gem 'guard-ctags-bundler'
-  gem 'rb-readline', '~> 0.5.4'
-  gem 'guard-minitest'
-  gem 'guard-rubocop'
-  gem 'guard-livereload', '~> 2.4', require: false
+# Guard
+gem 'guard'
+gem 'guard-ctags-bundler'
+gem 'rb-readline', '~> 0.5.4'
+gem 'guard-minitest'
+gem 'guard-rubocop'
+gem 'guard-livereload', '~> 2.4', require: false
 
-  # I18n Tools
-  gem 'i18n-tasks', '~> 0.8.3'
+# I18n Tools
+gem 'i18n-tasks', '~> 0.8.3'
 
-  # Rails application preloader
-  gem 'spring'
-end
+# Rails application preloader
+gem 'spring'
+gem 'memory_test_fix'  # Sqlite inmemory fix
+gem 'rake'
+gem 'database_cleaner'
+gem 'colorize'
+gem 'fakeredis'
+gem 'fakeweb', '~> 1.3'
+gem 'webmock'
+gem 'rack-contrib'
+gem 'parallel_tests'
+gem 'pry-rescue'
+gem 'pry-rails' # pry is awsome
+gem 'hirb' # hirb makes pry output even more awesome
+gem 'pry-byebug' # kickass debugging
+gem 'pry-stack_explorer'
 
-group :test do
-  gem 'memory_test_fix'  # Sqlite inmemory fix
-  gem 'rake'
-  gem 'database_cleaner'
-  gem 'colorize'
-  gem 'fakeredis'
-  gem 'fakeweb', '~> 1.3'
-  gem 'webmock'
-  gem 'rack-contrib'
-end
+# Capistrano
+gem 'capistrano-rails', '~> 1.1.3'
+gem 'capistrano'
+gem 'capistrano-bundler', '~> 1.1.2'
+gem 'capistrano-rbenv'
 
-group :development, :test do
-  gem 'parallel_tests'
-  gem 'pry-rescue'
-  gem 'pry-rails' # pry is awsome
-  gem 'hirb' # hirb makes pry output even more awesome
-  gem 'pry-byebug' # kickass debugging
-  gem 'pry-stack_explorer'
+gem 'minitest', '5.10.1'  # 5.10.2 is buggy with this Rails version
+gem 'minitest-matchers'
+gem 'minitest-line'
+gem 'launchy' # save_and_open_page
+gem 'shoulda'
+gem 'minitest-rails-capybara'
+gem 'mocha'
 
-  # Capistrano
-  gem 'capistrano-rails', '~> 1.1.3'
-  gem 'capistrano'
-  gem 'capistrano-bundler', '~> 1.1.2'
-  gem 'capistrano-rbenv'
+# Gem for testing emails
+gem 'email_spec'
 
-  gem 'minitest', '5.10.1'  # 5.10.2 is buggy with this Rails version
-  gem 'minitest-matchers'
-  gem 'minitest-line'
-  gem 'launchy' # save_and_open_page
-  gem 'shoulda'
-  gem 'minitest-rails-capybara'
-  gem 'mocha'
+# Code Coverage
+gem 'simplecov'
+gem 'simplecov-json', require: false
+gem 'coveralls', require: false
 
-  # Gem for testing emails
-  gem 'email_spec'
+# test suite additions
+gem 'rails_best_practices'
+gem 'brakeman', github: 'presidentbeef/brakeman'  # security test: execute with 'brakeman' locked because of slim https://github.com/presidentbeef/brakeman/pull/602/files
+gem 'rubocop' # style enforcement
 
-  # Code Coverage
-  gem 'simplecov'
-  gem 'simplecov-json', require: false
-  gem 'coveralls', require: false
+gem 'bullet' # Notify about n+1 queries
+gem 'factory_girl_rails'
+gem 'ffaker'
 
-  # test suite additions
-  gem 'rails_best_practices'
-  gem 'brakeman', github: 'presidentbeef/brakeman'  # security test: execute with 'brakeman' locked because of slim https://github.com/presidentbeef/brakeman/pull/602/files
-  gem 'rubocop' # style enforcement
-
-  gem 'bullet' # Notify about n+1 queries
-end
-
-group :development, :test, :staging do
-  gem 'factory_girl_rails'
-  gem 'ffaker'
-
-  # styleguides
-  gem 'nkss-rails', github: 'nadarei/nkss-rails'
-end
+# styleguides
+gem 'nkss-rails', github: 'nadarei/nkss-rails'

@@ -64,40 +64,29 @@ gem "zip-zip"
 gem "elasticsearch-model"
 gem "elasticsearch-rails"
 
-group :development do
-  gem "brakeman"
-  gem "bullet"
-  gem "bundler-audit"
-  gem "capistrano-rails"
-  gem "capistrano3-puma"
-  gem "capistrano-rvm"
-  gem "celluloid-benchmark"
-  gem "rubocop", require: false
-  gem "spring"
-end
-
-group :development, :test do
-  gem "quiet_assets"
-end
-
-group :test do
-  gem "capybara"
-  gem "codeclimate-test-reporter", require: nil
-  gem "database_cleaner"
-  gem "factory_bot_rails"
-  gem "fakeweb", git: "https://github.com/SamMolokanov/fakeweb.git", branch: "ruby-2-4-1-support"
-  gem "minitest", "~> 5.4"
-  gem "mocha", require: false
-  gem "poltergeist"
-  gem "selenium-webdriver"
-  gem "timecop"
-end
-
-group :staging, :production do
-  gem "connection_pool"
-  gem "dalli"
-  gem "execjs"
-  gem "logstash-logger"
-  gem "raygun4ruby", "~> 1.1"
-  gem "therubyracer"
-end
+gem "brakeman"
+gem "bullet"
+gem "bundler-audit"
+gem "capistrano-rails"
+gem "capistrano3-puma"
+gem "capistrano-rvm"
+gem "celluloid-benchmark"
+gem "rubocop", require: false
+gem "spring"
+gem "quiet_assets"
+gem "capybara"
+gem "codeclimate-test-reporter", require: nil
+gem "database_cleaner"
+gem "factory_bot_rails"
+gem "fakeweb", git: "https://github.com/SamMolokanov/fakeweb.git", branch: "ruby-2-4-1-support"
+gem "minitest", "~> 5.4"
+gem "mocha", require: false
+gem "poltergeist"
+gem "selenium-webdriver"
+gem "timecop"
+gem "connection_pool"
+gem "dalli"
+gem "execjs"
+gem "logstash-logger"
+gem "raygun4ruby", "~> 1.1"
+gem "therubyracer"

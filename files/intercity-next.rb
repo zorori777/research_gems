@@ -27,40 +27,29 @@ gem "validates_email_format_of", "~> 1.6"
 gem "version_parser", "1.0.2"
 gem "whenever", "~> 0.9"
 
-group :development do
-  gem "capistrano"
-  gem "capistrano-rails"
-  gem "capistrano-rails-console"
-  gem "daemon_controller"
-  gem "letter_opener"
-  gem "listen", "~> 3.0.5"
-  gem "meta_request"
-  gem "spring"
-  gem "spring-watcher-listen", "~> 2.0.0"
-  gem "web-console"
-end
-
-group :development, :test do
-  gem "awesome_print"
-  gem "dotenv-rails", "2.2.1"
-  gem "rubocop"
-end
-
-group :test do
-  gem "codeclimate-test-reporter", require: nil
-  gem "database_cleaner"
-  gem "launchy"
-  gem "minitest-reporters"
-  gem "mocha"
-  gem "poltergeist"
-  gem "shoulda"
-  gem "timecop"
-end
-
-group :staging, :production do
-end
+gem "capistrano"
+gem "capistrano-rails"
+gem "capistrano-rails-console"
+gem "daemon_controller"
+gem "letter_opener"
+gem "listen", "~> 3.0.5"
+gem "meta_request"
+gem "spring"
+gem "spring-watcher-listen", "~> 2.0.0"
+gem "web-console"
+gem "awesome_print"
+gem "dotenv-rails", "2.2.1"
+gem "rubocop"
+gem "codeclimate-test-reporter", require: nil
+gem "database_cleaner"
+gem "launchy"
+gem "minitest-reporters"
+gem "mocha"
+gem "poltergeist"
+gem "shoulda"
+gem "timecop"
 
 source "https://rails-assets.org" do
-  gem "rails-assets-clipboard"
-  gem "rails-assets-fastclick"
+gem "rails-assets-clipboard"
+gem "rails-assets-fastclick"
 end

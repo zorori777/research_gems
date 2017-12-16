@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
-  "https://github.com/#{repo_name}.git"
+repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+"https://github.com/#{repo_name}.git"
 end
 
 # Rails
@@ -75,20 +75,15 @@ gem 'inky-rb', require: 'inky'
 gem 'premailer-rails'
 
 # Testing
-group :test, :development do
-  gem 'flexmock', require: false
-  gem 'factory_bot_rails'
+gem 'flexmock', require: false
+gem 'factory_bot_rails'
 
-  gem 'capybara', '~> 2.13.0'
-  # gem 'capybara-slow_finder_errors'
-  gem 'capybara-webkit'
-end
+gem 'capybara', '~> 2.13.0'
+# gem 'capybara-slow_finder_errors'
+gem 'capybara-webkit'
+gem 'webmock', '>= 1.22.6', require: false
 
-group :test do
-  gem 'webmock', '>= 1.22.6', require: false
+gem 'pdf-inspector', require: false
 
-  gem 'pdf-inspector', require: false
-
-  gem 'simplecov', require: false
-  gem 'codeclimate-test-reporter', require: false
-end
+gem 'simplecov', require: false
+gem 'codeclimate-test-reporter', require: false

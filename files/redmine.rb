@@ -25,27 +25,15 @@ gem 'tzinfo-data', platforms: [:mingw, :x64_mingw, :mswin]
 gem "rbpdf", "~> 1.19.3"
 
 # Optional gem for LDAP authentication
-group :ldap do
   gem "net-ldap", "~> 0.16.0"
-end
-
 # Optional gem for OpenID authentication
-group :openid do
   gem "ruby-openid", "~> 2.3.0", :require => "openid"
   gem "rack-openid"
-end
-
-platforms :mri, :mingw, :x64_mingw do
   # Optional gem for exporting the gantt to a PNG file, not supported with jruby
-  group :rmagick do
     gem "rmagick", ">= 2.14.0"
-  end
 
   # Optional Markdown support, not for JRuby
-  group :markdown do
     gem "redcarpet", "~> 3.4.0"
-  end
-end
 
 # Include database gems for the adapters found in the database
 # configuration file
@@ -78,12 +66,8 @@ else
   warn("Please configure your config/database.yml first")
 end
 
-group :development do
   gem "rdoc", "~> 4.3"
   gem "yard"
-end
-
-group :test do
   gem "rails-dom-testing"
   gem "mocha"
   gem "simplecov", "~> 0.14.1", :require => false
@@ -91,7 +75,6 @@ group :test do
   gem 'puma', '~> 3.7'
   gem "capybara", '~> 2.13'
   gem "selenium-webdriver"
-end
 
 local_gemfile = File.join(File.dirname(__FILE__), "Gemfile.local")
 if File.exists?(local_gemfile)

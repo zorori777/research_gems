@@ -64,13 +64,8 @@ gem "sprockets-rails",        "3.2.1"
 
 # Database
 
-group :mysql, optional: true do
-  gem "mysql2", "0.4.9"
-end
-group :postgresql, optional: true do
-  gem "pg",     "0.21.0"
-end
-
+gem "mysql2", "0.4.9"
+gem "pg",     "0.21.0"
 
 gem "activerecord-import", "0.20.1"
 
@@ -95,31 +90,31 @@ gem "js-routes",         "1.4.1"
 gem "js_image_paths",    "0.1.1"
 
 source "https://rails-assets.org" do
-  gem "rails-assets-jquery",                              "3.2.1" # Should be kept in sync with jquery-rails
-  gem "rails-assets-jquery.ui",                           "1.11.4"
+gem "rails-assets-jquery",                              "3.2.1" # Should be kept in sync with jquery-rails
+gem "rails-assets-jquery.ui",                           "1.11.4"
 
-  gem "rails-assets-highlightjs",                         "9.12.0"
-  gem "rails-assets-markdown-it",                         "8.4.0"
-  gem "rails-assets-markdown-it-hashtag",                 "0.4.0"
-  gem "rails-assets-markdown-it-diaspora-mention",        "1.2.0"
-  gem "rails-assets-markdown-it-sanitizer",               "0.4.3"
-  gem "rails-assets-markdown-it--markdown-it-for-inline", "0.1.1"
-  gem "rails-assets-markdown-it-sub",                     "1.0.0"
-  gem "rails-assets-markdown-it-sup",                     "1.0.0"
+gem "rails-assets-highlightjs",                         "9.12.0"
+gem "rails-assets-markdown-it",                         "8.4.0"
+gem "rails-assets-markdown-it-hashtag",                 "0.4.0"
+gem "rails-assets-markdown-it-diaspora-mention",        "1.2.0"
+gem "rails-assets-markdown-it-sanitizer",               "0.4.3"
+gem "rails-assets-markdown-it--markdown-it-for-inline", "0.1.1"
+gem "rails-assets-markdown-it-sub",                     "1.0.0"
+gem "rails-assets-markdown-it-sup",                     "1.0.0"
 
-  gem "rails-assets-backbone",                            "1.3.3"
-  gem "rails-assets-bootstrap-markdown",                  "2.10.0"
-  gem "rails-assets-corejs-typeahead",                    "1.1.1"
-  gem "rails-assets-fine-uploader",                       "5.13.0"
+gem "rails-assets-backbone",                            "1.3.3"
+gem "rails-assets-bootstrap-markdown",                  "2.10.0"
+gem "rails-assets-corejs-typeahead",                    "1.1.1"
+gem "rails-assets-fine-uploader",                       "5.13.0"
 
-  # jQuery plugins
+# jQuery plugins
 
-  gem "rails-assets-autosize",                            "4.0.0"
-  gem "rails-assets-blueimp-gallery",                     "2.27.0"
-  gem "rails-assets-jquery.are-you-sure",                 "1.9.0"
-  gem "rails-assets-jquery-placeholder",                  "2.3.1"
-  gem "rails-assets-jquery-textchange",                   "0.2.3"
-  gem "rails-assets-perfect-scrollbar",                   "0.6.16"
+gem "rails-assets-autosize",                            "4.0.0"
+gem "rails-assets-blueimp-gallery",                     "2.27.0"
+gem "rails-assets-jquery.are-you-sure",                 "1.9.0"
+gem "rails-assets-jquery-placeholder",                  "2.3.1"
+gem "rails-assets-jquery-textchange",                   "0.2.3"
+gem "rails-assets-perfect-scrollbar",                   "0.6.16"
 end
 
 # Localization
@@ -215,102 +210,90 @@ gem "versionist", "1.6.0"
 
 # gem "therubyracer", :platform => :ruby
 
-group :production do # we don"t install these on travis to speed up test runs
-  # Analytics
 
-  gem "rack-google-analytics", "1.2.0"
-  gem "rack-piwik",            "0.3.0",  require: "rack/piwik"
+gem "rack-google-analytics", "1.2.0"
+gem "rack-piwik",            "0.3.0",  require: "rack/piwik"
 
-  # Process management
+# Process management
 
-  gem "eye", "0.9.2"
+gem "eye", "0.9.2"
 
-  # Redirects
+# Redirects
 
-  gem "rack-rewrite", "1.5.1", require: false
-  gem "rack-ssl",     "1.4.1", require: "rack/ssl"
+gem "rack-rewrite", "1.5.1", require: false
+gem "rack-ssl",     "1.4.1", require: "rack/ssl"
 
-  # Third party asset hosting
+# Third party asset hosting
 
-  gem "asset_sync", "2.2.0", require: false
-end
+gem "asset_sync", "2.2.0", require: false
+# Automatic test runs
+gem "guard",          "2.14.1", require: false
+gem "guard-cucumber", "2.1.2", require: false
+gem "guard-rspec",    "4.7.3", require: false
+gem "guard-rubocop",  "1.3.0", require: false
+gem "rb-fsevent",     "0.10.2", require: false
+gem "rb-inotify",     "0.9.10", require: false
 
-group :development do
-  # Automatic test runs
-  gem "guard",          "2.14.1", require: false
-  gem "guard-cucumber", "2.1.2", require: false
-  gem "guard-rspec",    "4.7.3", require: false
-  gem "guard-rubocop",  "1.3.0", require: false
-  gem "rb-fsevent",     "0.10.2", require: false
-  gem "rb-inotify",     "0.9.10", require: false
+# Linters
+gem "haml_lint",      "0.26.0", require: false
+gem "pronto",         "0.9.5", require: false
+gem "pronto-eslint",  "0.9.1", require: false
+gem "pronto-haml",    "0.9.0", require: false
+gem "pronto-rubocop", "0.9.0", require: false
+gem "pronto-scss",    "0.9.1", require: false
+gem "rubocop",        "0.50.0", require: false
 
-  # Linters
-  gem "haml_lint",      "0.26.0", require: false
-  gem "pronto",         "0.9.5", require: false
-  gem "pronto-eslint",  "0.9.1", require: false
-  gem "pronto-haml",    "0.9.0", require: false
-  gem "pronto-rubocop", "0.9.0", require: false
-  gem "pronto-scss",    "0.9.1", require: false
-  gem "rubocop",        "0.50.0", require: false
+# Preloading environment
 
-  # Preloading environment
+gem "spring", "2.0.2"
+gem "spring-commands-rspec", "1.0.4"
+gem "spring-commands-cucumber", "1.0.1"
 
-  gem "spring", "2.0.2"
-  gem "spring-commands-rspec", "1.0.4"
-  gem "spring-commands-cucumber", "1.0.1"
+# Debugging
+gem "pry"
+gem "pry-byebug"
 
-  # Debugging
-  gem "pry"
-  gem "pry-byebug"
+# test coverage
+gem "simplecov", "0.14.1", require: false
 
-  # test coverage
-  gem "simplecov", "0.14.1", require: false
+gem "turbo_dev_assets", "0.0.2"
+# RSpec (unit tests, some integration tests)
 
-  gem "turbo_dev_assets", "0.0.2"
-end
+gem "fixture_builder",   "0.5.0"
+gem "fuubar",            "2.2.0"
+gem "json-schema-rspec", "0.0.4"
+gem "rspec-json_expectations", "~> 2.1"
 
-group :test do
-  # RSpec (unit tests, some integration tests)
+# Cucumber (integration tests)
 
-  gem "fixture_builder",   "0.5.0"
-  gem "fuubar",            "2.2.0"
-  gem "json-schema-rspec", "0.0.4"
-  gem "rspec-json_expectations", "~> 2.1"
+gem "capybara",           "2.15.1"
+gem "database_cleaner",   "1.6.1"
+gem "poltergeist",        "1.16.0"
 
-  # Cucumber (integration tests)
+gem "cucumber-api-steps", "0.13", require: false
 
-  gem "capybara",           "2.15.1"
-  gem "database_cleaner",   "1.6.1"
-  gem "poltergeist",        "1.16.0"
+# General helpers
 
-  gem "cucumber-api-steps", "0.13", require: false
+gem "factory_girl_rails", "4.8.0"
+gem "shoulda-matchers",   "3.1.2"
+gem "timecop",            "0.9.1"
+gem "webmock",            "3.0.1", require: false
 
-  # General helpers
+gem "diaspora_federation-test", "0.2.2"
 
-  gem "factory_girl_rails", "4.8.0"
-  gem "shoulda-matchers",   "3.1.2"
-  gem "timecop",            "0.9.1"
-  gem "webmock",            "3.0.1", require: false
+# Coverage
+gem "coveralls", "0.8.21", require: false
+# RSpec (unit tests, some integration tests)
+gem "rspec-rails", "3.6.1"
 
-  gem "diaspora_federation-test", "0.2.2"
+# Cucumber (integration tests)
+gem "cucumber-rails", "1.5.0", require: false
 
-  # Coverage
-  gem "coveralls", "0.8.21", require: false
-end
+# Jasmine (client side application tests (JS))
+gem "jasmine",                   "2.8.0"
+gem "jasmine-jquery-rails",      "2.0.3"
+gem "rails-assets-jasmine-ajax", "3.3.1", source: "https://rails-assets.org"
+gem "sinon-rails",               "1.15.0"
 
-group :development, :test do
-  # RSpec (unit tests, some integration tests)
-  gem "rspec-rails", "3.6.1"
-
-  # Cucumber (integration tests)
-  gem "cucumber-rails", "1.5.0", require: false
-
-  # Jasmine (client side application tests (JS))
-  gem "jasmine",                   "2.8.0"
-  gem "jasmine-jquery-rails",      "2.0.3"
-  gem "rails-assets-jasmine-ajax", "3.3.1", source: "https://rails-assets.org"
-  gem "sinon-rails",               "1.15.0"
-
-  # For `assigns` in controller specs
-  gem "rails-controller-testing", "1.0.2"
-end
+# For `assigns` in controller specs
+gem "rails-controller-testing", "1.0.2"

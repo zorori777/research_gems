@@ -5,33 +5,27 @@ gem 'rails', '4.2'
 gem 'rack'
 gem 'puma'
 
-group :development do
-  gem 'better_errors'
-  gem 'binding_of_caller'
-  gem 'quiet_assets'
-end
+gem 'better_errors'
+gem 'binding_of_caller'
+gem 'quiet_assets'
+gem 'rspec-rails'
+gem 'rspec-collection_matchers'
+gem 'factory_girl_rails'
+gem 'meta_request', '0.2.6'
+gem 'jazz_hands', github: 'nixme/jazz_hands', branch: 'bring-your-own-debugger'
+gem 'pry-byebug'
+gem 'pry-coolline'
 
-group :development, :test do
-  gem 'rspec-rails'
-  gem 'rspec-collection_matchers'
-  gem 'factory_girl_rails'
-  gem 'meta_request', '0.2.6'
-  gem 'jazz_hands', github: 'nixme/jazz_hands', branch: 'bring-your-own-debugger'
-  gem 'pry-byebug'
-  gem 'pry-coolline'
-
-  # Guard shizzle
-  gem 'rb-inotify', '~> 0.9', require: false # Only needed on Linux. May need to install libnotify with OS's package manager
-  gem 'rb-fsevent', require: false # For OS X
-  gem 'guard', '>=2.1.0'
-  gem 'guard-rspec' # Automatically runs specs when corresponding files change
-  gem 'guard-rails'   # Reloads Rails server when cached files like those in /config change
-  gem 'guard-livereload' # Sends signal to Livereload extension in browser to reload page
-  gem 'guard-migrate' # Automatically runs migrations when needed
-  gem 'terminal-notifier-guard', require: false
-  gem 'letter_opener'
-end
-
+# Guard shizzle
+gem 'rb-inotify', '~> 0.9', require: false # Only needed on Linux. May need to install libnotify with OS's package manager
+gem 'rb-fsevent', require: false # For OS X
+gem 'guard', '>=2.1.0'
+gem 'guard-rspec' # Automatically runs specs when corresponding files change
+gem 'guard-rails'   # Reloads Rails server when cached files like those in /config change
+gem 'guard-livereload' # Sends signal to Livereload extension in browser to reload page
+gem 'guard-migrate' # Automatically runs migrations when needed
+gem 'terminal-notifier-guard', require: false
+gem 'letter_opener'
 # Previously assets group
 gem 'sass-rails', '~> 4.0.2'
 gem 'bootstrap-sass'
@@ -40,17 +34,13 @@ gem 'uglifier', '>= 1.0.3'
 gem 'momentjs-rails', '~> 2.5.0'
 gem 'bootstrap3-datetimepicker-rails', '~> 2.1.30'
 gem 'font-awesome-sass', '4.0.3.1'
-
-group :test do
-  gem 'capybara', ">= 2.2.0"
-  gem 'database_cleaner'
-  gem 'faker' # Generates names, emails and other placeholders for factories
-  gem 'shoulda-matchers'
-  gem 'poltergeist'
-  gem 'launchy'
-  gem 'timecop'
-end
-
+gem 'capybara', ">= 2.2.0"
+gem 'database_cleaner'
+gem 'faker' # Generates names, emails and other placeholders for factories
+gem 'shoulda-matchers'
+gem 'poltergeist'
+gem 'launchy'
+gem 'timecop'
 gem 'pg'
 gem 'turbolinks'
 gem 'jquery-turbolinks'

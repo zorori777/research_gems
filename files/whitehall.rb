@@ -1,5 +1,3 @@
-source 'https://rubygems.org'
-
 gem 'rake', '12.0.0'
 gem 'rails', '5.0.4'
 gem 'rack', '~> 2.0'
@@ -57,74 +55,48 @@ gem 'deprecated_columns', '~> 0.1.1'
 gem 'record_tag_helper', '~> 1.0'
 gem 'govuk_ab_testing', '~> 2.4x'
 
-if ENV['GDS_API_ADAPTERS_DEV']
-  gem 'gds-api-adapters', path: '../gds-api-adapters'
-else
-  gem 'gds-api-adapters'
-end
-
-if ENV['GOVSPEAK_DEV']
-  gem 'govspeak', path: '../govspeak'
-else
-  gem 'govspeak', '~> 5.1.0'
-end
-
-if ENV['FRONTEND_TOOLKIT_DEV']
-  gem 'govuk_frontend_toolkit', path: '../govuk_frontend_toolkit_gem'
-else
-  gem 'govuk_frontend_toolkit', '7.0.1'
-end
-
+gem 'gds-api-adapters', path: '../gds-api-adapters'
+gem 'gds-api-adapters'
+gem 'govspeak', path: '../govspeak'
+gem 'govspeak', '~> 5.1.0'
+gem 'govuk_frontend_toolkit', path: '../govuk_frontend_toolkit_gem'
+gem 'govuk_frontend_toolkit', '7.0.1'
 gem 'asset_bom_removal-rails', '~> 1.0.0'
 gem 'sass', '~> 3.5'
 gem 'sassc-rails', '~> 1.3'
 gem 'uglifier', '~> 3.2'
 
-group :development, :test do
-  gem 'parallel_tests'
-  gem 'test-queue', '~> 0.2.13'
-  gem 'ruby-prof'
-  gem 'pry-byebug'
-  gem 'pry-rails'
-  gem 'govuk-lint', '~> 3.3.1'
-  gem 'dotenv-rails'
-  gem 'teaspoon-qunit'
-  # teaspoon has coffee assets that mean we need coffee script in order
-  # to be able to run things
-  gem 'coffee-rails', '~> 4.1.0'
-end
-
-group :development do
-  gem 'better_errors'
-  gem 'binding_of_caller'
-  gem 'newrelic_rpm'
-  gem 'stackprof', require: false
-  gem 'graphviz_transitions'
-end
-
-group :test do
-  gem 'rack-test'
-  gem 'factory_bot'
-  gem 'mocha', require: false
-  gem 'timecop'
-  gem 'webmock', require: false
-  gem 'ci_reporter_minitest'
-  gem 'database_cleaner'
-  gem 'govuk-content-schema-test-helpers'
-  gem 'minitest-fail-fast'
-  gem 'maxitest'
-  gem 'rails-controller-testing'
-end
-
-group :test_coverage do
-  gem 'simplecov'
-  gem 'simplecov-rcov'
-end
-
-group :cucumber, :test do
-  gem 'cucumber-rails', require: false
-  gem 'cucumber', '~> 2.4.0'
-  gem 'launchy'
-  gem 'capybara'
-  gem 'poltergeist'
-end
+gem 'parallel_tests'
+gem 'test-queue', '~> 0.2.13'
+gem 'ruby-prof'
+gem 'pry-byebug'
+gem 'pry-rails'
+gem 'govuk-lint', '~> 3.3.1'
+gem 'dotenv-rails'
+gem 'teaspoon-qunit'
+# teaspoon has coffee assets that mean we need coffee script in order
+# to be able to run things
+gem 'coffee-rails', '~> 4.1.0'
+gem 'better_errors'
+gem 'binding_of_caller'
+gem 'newrelic_rpm'
+gem 'stackprof', require: false
+gem 'graphviz_transitions'
+gem 'rack-test'
+gem 'factory_bot'
+gem 'mocha', require: false
+gem 'timecop'
+gem 'webmock', require: false
+gem 'ci_reporter_minitest'
+gem 'database_cleaner'
+gem 'govuk-content-schema-test-helpers'
+gem 'minitest-fail-fast'
+gem 'maxitest'
+gem 'rails-controller-testing'
+gem 'simplecov'
+gem 'simplecov-rcov'
+gem 'cucumber-rails', require: false
+gem 'cucumber', '~> 2.4.0'
+gem 'launchy'
+gem 'capybara'
+gem 'poltergeist'

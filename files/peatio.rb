@@ -70,33 +70,28 @@ gem 'carrierwave', '~> 0.10.0'
 gem 'simple_captcha2', require: 'simple_captcha'
 gem 'rest-client', '~> 1.6.8'
 
-group :development, :test do
-  gem 'factory_girl_rails'
-  gem 'faker', '~> 1.4.3'
-  gem 'mina'
-  gem 'mina-slack', github: 'peatio/mina-slack'
-  gem 'meta_request'
-  gem 'better_errors'
-  gem 'binding_of_caller'
-  gem 'pry-rails'
-  gem 'quiet_assets'
-  gem 'mails_viewer'
-  gem 'timecop'
-  gem 'dotenv-rails'
-  gem 'rspec-rails'
-  gem 'byebug'
-end
+gem 'factory_girl_rails'
+gem 'faker', '~> 1.4.3'
+gem 'mina'
+gem 'mina-slack', github: 'peatio/mina-slack'
+gem 'meta_request'
+gem 'better_errors'
+gem 'binding_of_caller'
+gem 'pry-rails'
+gem 'quiet_assets'
+gem 'mails_viewer'
+gem 'timecop'
+gem 'dotenv-rails'
+gem 'rspec-rails'
+gem 'byebug'
+gem 'database_cleaner'
+gem 'mocha', :require => false
+gem 'shoulda-matchers'
+gem 'capybara'
+gem 'launchy'
+gem 'selenium-webdriver'
+gem 'poltergeist'
 
-group :test do
-  gem 'database_cleaner'
-  gem 'mocha', :require => false
-  gem 'shoulda-matchers'
-  gem 'capybara'
-  gem 'launchy'
-  gem 'selenium-webdriver'
-  gem 'poltergeist'
-
-  # rspec-rails rely on test-unit if rails version less then 4.1.0
-  # but test-unit has been removed from ruby core since 2.2.0
-  gem 'test-unit'
-end
+# rspec-rails rely on test-unit if rails version less then 4.1.0
+# but test-unit has been removed from ruby core since 2.2.0
+gem 'test-unit'

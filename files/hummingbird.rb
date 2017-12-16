@@ -43,37 +43,31 @@ gem 'font-awesome-sass'
 gem 'twitter-typeahead-rails'
 
 # Gems to help with development.
-group :development do
-  gem 'foreman'
-  gem 'letter_opener'
-  gem 'guard-livereload', require: false
-  gem 'guard-minitest', require: false
-  gem 'rack-livereload'
-  gem 'rb-readline', require: false
-  gem 'rb-fsevent', require: false
-  gem 'qunit-rails'
-  gem 'spring'
-end
-
+gem 'foreman'
+gem 'letter_opener'
+gem 'guard-livereload', require: false
+gem 'guard-minitest', require: false
+gem 'rack-livereload'
+gem 'rb-readline', require: false
+gem 'rb-fsevent', require: false
+gem 'qunit-rails'
+gem 'spring'
 gem 'dotenv-rails', groups: [:development, :test]
 
 gem 'rack-mini-profiler'
 gem 'flamegraph'
 
 # Testing
-group :test do
-  gem 'shoulda'
-  gem 'timecop'
-  gem 'mock_redis'
-  gem 'mocha'
-  gem 'webmock'
-  gem 'stripe-ruby-mock'
-  gem 'minitest-rails'
-  gem 'json_expressions'
-  gem 'factory_girl_rails'
-  gem 'faker'
-end
-
+gem 'shoulda'
+gem 'timecop'
+gem 'mock_redis'
+gem 'mocha'
+gem 'webmock'
+gem 'stripe-ruby-mock'
+gem 'minitest-rails'
+gem 'json_expressions'
+gem 'factory_girl_rails'
+gem 'faker'
 gem 'codeclimate-test-reporter', group: :test, require: nil
 
 gem 'haml', '~> 4.0'

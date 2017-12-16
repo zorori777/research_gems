@@ -44,7 +44,7 @@ gem "sprockets-rails", "~> 2.3"
 gem "brakeman"
 
 source "https://rails-assets.org" do
-  gem "rails-assets-chartjs"
+gem "rails-assets-chartjs"
 end
 
 # caching
@@ -53,36 +53,25 @@ gem "kgio" # faster I/O
 gem "dalli" # memcached
 gem "memcachier"
 
-group :development do
-  gem "better_errors"
-  gem "binding_of_caller"
-  gem "foreman"
-  gem "pry"
-  gem "spring"
-  gem "spring-commands-rspec"
-end
-
-group :development, :test do
-  gem "dotenv-rails"
-  gem "factory_girl_rails"
-  gem "pry-rails"
-  gem "rspec-rails", "~> 3.0"
-  gem "annotate"
-  gem "letter_opener"
-  gem "email_spec"
-end
-
-group :test do
-  gem "capybara-webkit", ">= 1.0.0"
-  gem "database_cleaner"
-  gem "launchy"
-  gem "shoulda-matchers", "~> 2.7.0"
-  gem "simplecov", require: false
-  gem "timecop"
-  gem "webmock"
-end
-
-group :staging, :production do
-  gem "newrelic_rpm", ">= 3.7.3"
-  gem "rails_12factor"
-end
+gem "better_errors"
+gem "binding_of_caller"
+gem "foreman"
+gem "pry"
+gem "spring"
+gem "spring-commands-rspec"
+gem "dotenv-rails"
+gem "factory_girl_rails"
+gem "pry-rails"
+gem "rspec-rails", "~> 3.0"
+gem "annotate"
+gem "letter_opener"
+gem "email_spec"
+gem "capybara-webkit", ">= 1.0.0"
+gem "database_cleaner"
+gem "launchy"
+gem "shoulda-matchers", "~> 2.7.0"
+gem "simplecov", require: false
+gem "timecop"
+gem "webmock"
+gem "newrelic_rpm", ">= 3.7.3"
+gem "rails_12factor"

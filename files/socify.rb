@@ -20,28 +20,19 @@ gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'font-awesome-rails'
 
-group :development do
-  gem 'spring'
-  gem 'better_errors'
-  gem 'binding_of_caller'
-  gem 'letter_opener'
-  gem 'guard'
-  gem 'guard-rspec', '~> 4.2.8'
-end
-
-group :development, :test do
-  gem 'puma'
-  gem 'sqlite3'
-end
-
-group :production do
-  gem 'pg'
-  gem 'unicorn'
-  gem 'rails_12factor'
-  gem 'fog'
-  gem 'fog-aws'
-end
-
+gem 'spring'
+gem 'better_errors'
+gem 'binding_of_caller'
+gem 'letter_opener'
+gem 'guard'
+gem 'guard-rspec', '~> 4.2.8'
+gem 'puma'
+gem 'sqlite3'
+gem 'pg'
+gem 'unicorn'
+gem 'rails_12factor'
+gem 'fog'
+gem 'fog-aws'
 gem 'devise'
 gem 'carrierwave'
 gem 'friendly_id', '~> 5.0'

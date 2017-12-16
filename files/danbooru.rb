@@ -52,32 +52,21 @@ gem 'recaptcha', require: "recaptcha/rails"
 # needed for looser jpeg header compat
 gem 'ruby-imagespec', :require => "image_spec", :git => "https://github.com/r888888888/ruby-imagespec.git", :branch => "exif-fixes"
 
-group :production, :staging do
-  gem 'unicorn', :platforms => :ruby
-  gem 'capistrano3-unicorn'
-end
-
-group :production do
-  gem 'unicorn-worker-killer'
-  gem 'newrelic_rpm'
-  gem 'gctools', :platforms => :ruby
-  gem 'capistrano-deploytags', '~> 1.0.0', require: false
-end
-
-group :development, :test do
-  gem 'awesome_print'
-  gem 'pry-byebug'
-  gem 'ruby-prof'
-end
-
-group :test do
-  gem "shoulda-context"
-  gem "shoulda-matchers"
-  gem "factory_girl"
-  gem "mocha", :require => "mocha/setup"
-  gem "ffaker"
-  gem "simplecov", :require => false
-  gem "timecop"
-  gem "webmock"
-  gem "test_after_commit" # XXX remove me after upgrading to rails 5.
-end
+gem 'unicorn', :platforms => :ruby
+gem 'capistrano3-unicorn'
+gem 'unicorn-worker-killer'
+gem 'newrelic_rpm'
+gem 'gctools', :platforms => :ruby
+gem 'capistrano-deploytags', '~> 1.0.0', require: false
+gem 'awesome_print'
+gem 'pry-byebug'
+gem 'ruby-prof'
+gem "shoulda-context"
+gem "shoulda-matchers"
+gem "factory_girl"
+gem "mocha", :require => "mocha/setup"
+gem "ffaker"
+gem "simplecov", :require => false
+gem "timecop"
+gem "webmock"
+gem "test_after_commit" # XXX remove me after upgrading to rails 5.

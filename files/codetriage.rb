@@ -1,24 +1,24 @@
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
-  "https://github.com/#{repo_name}.git"
+repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+"https://github.com/#{repo_name}.git"
 end
 
 ruby '> 2.4', '< 2.6'
 
 git_source :github do |name|
-  "https://github.com/#{name}.git"
+"https://github.com/#{name}.git"
 end
 
 gem 'mime-types', '~> 2.6.1', require: 'mime/types/columnar'
 
 # Gems required in all environments
 if ENV["RAILS_MASTER"] == '1'
-  gem 'arel', git: 'https://github.com/rails/arel.git'
-  gem 'rails', git: 'https://github.com/rails/rails.git'
+gem 'arel', git: 'https://github.com/rails/arel.git'
+gem 'rails', git: 'https://github.com/rails/rails.git'
 else
-  gem 'rails', '5.1.4'
+gem 'rails', '5.1.4'
 end
 
 gem 'bluecloth'
@@ -52,35 +52,25 @@ gem 'normalize-rails'
 gem 'slim-rails'
 gem 'uglifier', '>= 1.0.3'
 gem 'render_async', '~> 1.1', '>= 1.1.2'
-
-group :development do
-  gem 'bullet'
-  gem 'foreman'
-  gem 'listen'
-  gem 'spring'
-  gem 'web-console'
-end
-
-group :test do
-  gem 'capybara', '2.6.2'
-  # Not essential but helpful for save_and_open_page
-  gem 'launchy'
-  gem 'mocha', require: false
-  gem 'rails-controller-testing'
-  gem 'simplecov', require: false
-  gem 'vcr'
-  gem 'webmock'
-end
-
-group :development, :test do
-  gem 'derailed_benchmarks'
-  gem 'dotenv-rails'
-  gem 'faker', require: false
-  gem 'pry'
-  gem 'rubocop', '0.49.1', require: false
-  gem 'teaspoon'
-end
-
+gem 'bullet'
+gem 'foreman'
+gem 'listen'
+gem 'spring'
+gem 'web-console'
+gem 'capybara', '2.6.2'
+# Not essential but helpful for save_and_open_page
+gem 'launchy'
+gem 'mocha', require: false
+gem 'rails-controller-testing'
+gem 'simplecov', require: false
+gem 'vcr'
+gem 'webmock'
+gem 'derailed_benchmarks'
+gem 'dotenv-rails'
+gem 'faker', require: false
+gem 'pry'
+gem 'rubocop', '0.49.1', require: false
+gem 'teaspoon'
 gem 'rack-mini-profiler'
 
 gem 'the_lone_dyno'

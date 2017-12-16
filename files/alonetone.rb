@@ -66,34 +66,21 @@ gem 'dalli'
 
 gem 'sinatra', require: false
 gem 'sinatra-contrib', require: false
-
-group :production do
-  gem 'puma'
-  gem 'bugsnag'
-end
-
-group :development do
-  gem 'thin'
-  gem 'sqlite3'
-  gem 'rack-mini-profiler'
-  gem 'perf_check'
-end
-
+gem 'puma'
+gem 'bugsnag'
+gem 'thin'
+gem 'sqlite3'
+gem 'rack-mini-profiler'
+gem 'perf_check'
 ## Who loves tests! You do? You do!
-group :test do
-  gem "rspec-rails", :require => false
-  gem "rspec-mocks", :require => false
-  gem "timecop", :require => false
-  gem "guard-rspec", :require => false
-  gem 'database_cleaner', :require => false
-  gem 'rb-fsevent', :require => false
-  gem 'guard', :require => false
-  gem 'listen', :require => false
-  # https://github.com/thoughtbot/factory_bot/wiki/Usage
-  gem "factory_bot_rails",:require => false
-  gem 'rails-controller-testing'
-end
-
-group :development, :test do
-  gem 'pry'
-end
+gem "rspec-rails", :require => false
+gem "rspec-mocks", :require => false
+gem "timecop", :require => false
+gem "guard-rspec", :require => false
+gem 'database_cleaner', :require => false
+gem 'rb-fsevent', :require => false
+gem 'guard', :require => false
+gem 'listen', :require => false
+gem "factory_bot_rails",:require => false
+gem 'rails-controller-testing'
+gem 'pry'

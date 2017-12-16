@@ -133,55 +133,42 @@ gem 'connection_pool'
 gem 'dalli'
 gem 'kgio', '2.10.0'
 
-group :test do
-  gem 'rspec', '~> 3.4'
-  gem 'rspec-rails', '~> 3.6.0'
-  gem 'pickle'
-  gem 'shoulda'
-  gem 'capybara', '~> 2.6.2'
-  gem 'database_cleaner', '1.5.2'
-  gem 'cucumber', '~> 2.4.0'
-  gem 'selenium-webdriver'
-  gem 'poltergeist'
-  gem 'capybara-screenshot'
-  gem 'cucumber-rails', '~> 1.5', require: false
-  gem 'gherkin'
-  gem 'launchy'    # So you can do Then show me the page
-  gem 'delorean'
-  gem 'faker', '~> 1.6.3'
-  # Record and replay data from external URLs
-  gem 'vcr', '~> 3.0', '>= 3.0.1'
-  gem 'webmock', '~> 1.24.2'
-  gem 'timecop'
-  gem 'cucumber-timecop', :require => false
-  # Code coverage
-  gem 'simplecov', '~> 0.14.0'
-  gem 'codecov', '~> 0.1.10', require: false
-  gem 'email_spec', '1.6.0'
-end
-
-group :test, :development do
-  gem 'awesome_print'
-  gem 'pry-byebug'
-  gem 'whiny_validation'
-  gem 'factory_girl', '~> 4.8.0'
-  gem 'minitest'
-end
-
-group :development do
-  gem 'factory_girl_rails'
-  gem 'bundler-audit'
-end
-
-group :test, :development, :staging do
-  gem 'bullet', '~> 5.6.0'
-end
+gem 'rspec', '~> 3.4'
+gem 'rspec-rails', '~> 3.6.0'
+gem 'pickle'
+gem 'shoulda'
+gem 'capybara', '~> 2.6.2'
+gem 'database_cleaner', '1.5.2'
+gem 'cucumber', '~> 2.4.0'
+gem 'selenium-webdriver'
+gem 'poltergeist'
+gem 'capybara-screenshot'
+gem 'cucumber-rails', '~> 1.5', require: false
+gem 'gherkin'
+gem 'launchy'    # So you can do Then show me the page
+gem 'delorean'
+gem 'faker', '~> 1.6.3'
+# Record and replay data from external URLs
+gem 'vcr', '~> 3.0', '>= 3.0.1'
+gem 'webmock', '~> 1.24.2'
+gem 'timecop'
+gem 'cucumber-timecop', :require => false
+# Code coverage
+gem 'simplecov', '~> 0.14.0'
+gem 'codecov', '~> 0.1.10', require: false
+gem 'email_spec', '1.6.0'
+gem 'awesome_print'
+gem 'pry-byebug'
+gem 'whiny_validation'
+gem 'factory_girl', '~> 4.8.0'
+gem 'minitest'
+gem 'factory_girl_rails'
+gem 'bundler-audit'
+gem 'bullet', '~> 5.6.0'
 
 # Deploy with Capistrano
 gem 'capistrano-gitflow_version', '>=0.0.3', :require => false
 gem 'rvm-capistrano'
 
-group :production do
-  # Use unicorn as the web server
-  gem 'unicorn', '>= 5.1.0', :require => false
-end
+# Use unicorn as the web server
+gem 'unicorn', '>= 5.1.0', :require => false

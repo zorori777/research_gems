@@ -109,67 +109,50 @@ gem 'closure-compiler', '~> 1.1.11'
 
 # Oracle adapter
 # Purposely excluding this for test environments since folks have to install ojdbc6
-group :development, :testext, :production do
-  gem 'activerecord-oracle_enhanced-adapter', '~> 1.5.6'
-  gem 'rvm-capistrano', '~> 1.3.1'
-  gem 'capistrano', '~> 2.15.4'
-end
+gem 'activerecord-oracle_enhanced-adapter', '~> 1.5.6'
+gem 'rvm-capistrano', '~> 1.3.1'
+gem 'capistrano', '~> 2.15.4'
+gem 'rspec-core', '~> 3.1.7'
+gem 'rspec-rails', '~> 3.1.0'
+gem 'rspec-mocks', '~> 3.1.3'
+gem 'rspec-support', '~> 3.1.2'
+gem 'rspec-its', '~> 1.1.0'
+gem 'rspec-collection_matchers', '~> 1.1.2'
+gem 'minitest-reporters', '~> 1.0.8'
 
-group :development, :test , :testext do
-  gem 'rspec-core', '~> 3.1.7'
-  gem 'rspec-rails', '~> 3.1.0'
-  gem 'rspec-mocks', '~> 3.1.3'
-  gem 'rspec-support', '~> 3.1.2'
-  gem 'rspec-its', '~> 1.1.0'
-  gem 'rspec-collection_matchers', '~> 1.1.2'
-  gem 'minitest-reporters', '~> 1.0.8'
+# We need to specify the latest webdriver here, to support the latest firefox
+gem 'selenium-webdriver', '~> 2.53.4'
 
-  # We need to specify the latest webdriver here, to support the latest firefox
-  gem 'selenium-webdriver', '~> 2.53.4'
+# Code coverage for Ruby 1.9 with a powerful configuration library and automatic merging of coverage across test suites
+# https://rubygems.org/gems/simplecov
+gem 'simplecov', '~> 0.9.2', require: false
+gem 'simplecov-html', '~> 0.9.0', require: false
 
-  # Code coverage for Ruby 1.9 with a powerful configuration library and automatic merging of coverage across test suites
-  # https://rubygems.org/gems/simplecov
-  gem 'simplecov', '~> 0.9.2', require: false
-  gem 'simplecov-html', '~> 0.9.0', require: false
+# Capybara is an integration testing tool for rack based web applications.
+# It simulates how a user would interact with a website
+# https://rubygems.org/gems/capybara
+gem 'capybara', '~> 2.4.4'
 
-  # Capybara is an integration testing tool for rack based web applications.
-  # It simulates how a user would interact with a website
-  # https://rubygems.org/gems/capybara
-  gem 'capybara', '~> 2.4.4'
+# Headless is a Ruby interface for Xvfb. It allows you to create a headless display straight
+# from Ruby code, hiding some low-level action.
+gem 'headless', '~> 1.0.2'
 
-  # Headless is a Ruby interface for Xvfb. It allows you to create a headless display straight
-  # from Ruby code, hiding some low-level action.
-  gem 'headless', '~> 1.0.2'
+# Spork can speed up multiple test runs.
+gem 'spork','1.0.0rc0'
+gem 'guard-spork'
+gem 'spork-rails'
 
-  # Spork can speed up multiple test runs.
-  gem 'spork','1.0.0rc0'
-  gem 'guard-spork'
-  gem 'spork-rails'
+# Webmock is not thread-safe and should never be enabled in production-like environments.
+gem 'webmock', '~> 1.20.4'
+# Automatically reloads your browser when 'view' files are modified.
+# https://github.com/guard/guard-livereload
+gem 'guard-livereload', '~> 2.4.0', require: false
 
-  # Webmock is not thread-safe and should never be enabled in production-like environments.
-  gem 'webmock', '~> 1.20.4'
-end
-
-group :development do
-  # Automatically reloads your browser when 'view' files are modified.
-  # https://github.com/guard/guard-livereload
-  gem 'guard-livereload', '~> 2.4.0', require: false
-
-  # To support debug in Torquebox.
-  gem 'ruby-debug-ide', '~> 0.6.0'
-end
-
-group :test do
-  gem 'activerecord-jdbcsqlite3-adapter', '~> 1.3.16'
-  gem 'page-object', '~> 1.2.0'
-end
-
-group :test, :testext do
-  # RSpec results that Hudson + Bamboo + xml happy CI servers can read. See https://rubygems.org/gems/rspec_junit_formatter
-  # TODO: Use gem 'rspec_junit_formatter', '~> 0.2.x' when deprecated concern of CLC-3565 is resolved.
-  gem 'rspec_junit_formatter', :git => 'https://github.com/sj26/rspec_junit_formatter.git'
-end
-
-group :shell_debug do
-  gem 'ruby-debug', '>= 0.10.5.rc9'
-end
+# To support debug in Torquebox.
+gem 'ruby-debug-ide', '~> 0.6.0'
+gem 'activerecord-jdbcsqlite3-adapter', '~> 1.3.16'
+gem 'page-object', '~> 1.2.0'
+# RSpec results that Hudson + Bamboo + xml happy CI servers can read. See https://rubygems.org/gems/rspec_junit_formatter
+# TODO: Use gem 'rspec_junit_formatter', '~> 0.2.x' when deprecated concern of CLC-3565 is resolved.
+gem 'rspec_junit_formatter', :git => 'https://github.com/sj26/rspec_junit_formatter.git'
+gem 'ruby-debug', '>= 0.10.5.rc9'

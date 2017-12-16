@@ -30,8 +30,8 @@ gem 'daemon-spawn'
 gem 'dbf'
 gem 'delayed_job', '~> 4.0.1'
 gem 'delayed_job_active_record',
-  git: 'https://github.com/hugueslamy/delayed_job_active_record.git',
-  ref: '7dcacc2459ad47c948153cc3bab78bc822191718'
+git: 'https://github.com/hugueslamy/delayed_job_active_record.git',
+ref: '7dcacc2459ad47c948153cc3bab78bc822191718'
 gem 'devise'
 gem 'devise-encryptable'
 gem 'devise-i18n'
@@ -72,7 +72,7 @@ gem 'omniauth-twitter'
 gem 'objectify-xml', :require => 'objectify_xml'
 gem "paperclip", "4.2.2"
 gem 'delayed_paperclip', git: 'https://github.com/jrgifford/delayed_paperclip.git',
-  ref: '8f11882ee945bf56affe8df4f591e5171581aac3'
+ref: '8f11882ee945bf56affe8df4f591e5171581aac3'
 gem 'pg'
 gem 'preferences', :git => 'https://github.com/kueda/preferences.git'
 gem 'rack-google-analytics', :git => 'https://github.com/kueda/rack-google-analytics.git', :branch => 'eval-blocks-per-request'
@@ -110,26 +110,18 @@ gem 'rgeo'
 gem 'rgeo-geojson'
 gem 'activerecord-postgis-adapter', :git => 'https://github.com/kueda/activerecord-postgis-adapter.git', :branch => 'activerecord42'
 
-group :production do
-  gem 'newrelic_rpm', '~> 3.15.0'
-end
-
-group :test, :development, :prod_dev do
-  gem "database_cleaner"
-  gem "machinist"
-  gem "better_errors"
-  gem "byebug"
-  gem "binding_of_caller"
-  gem 'thin', '~> 1.6.3'
-  gem 'capybara', '~> 2.4'
-  gem 'puma'
-end
-
-group :test do
-  gem 'faker'
-  gem 'simplecov', :require => false
-  gem "rspec", "~> 3.4.0"
-  gem "rspec-rails", "~> 3.4.2"
-  gem "rspec-html-matchers"
-  gem "webmock"
-end
+gem 'newrelic_rpm', '~> 3.15.0'
+gem "database_cleaner"
+gem "machinist"
+gem "better_errors"
+gem "byebug"
+gem "binding_of_caller"
+gem 'thin', '~> 1.6.3'
+gem 'capybara', '~> 2.4'
+gem 'puma'
+gem 'faker'
+gem 'simplecov', :require => false
+gem "rspec", "~> 3.4.0"
+gem "rspec-rails", "~> 3.4.2"
+gem "rspec-html-matchers"
+gem "webmock"

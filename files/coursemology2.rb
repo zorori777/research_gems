@@ -82,84 +82,66 @@ gem 'kaminari'
 # Work with Docker
 gem 'docker-api'
 
-group :development do
-  # Spring speeds up development by keeping your application running in the background.
-  # Read more: https://github.com/rails/spring
-  gem 'spring', platforms: [:ruby]
-  gem 'listen', '~> 1.3.1'
+# Spring speeds up development by keeping your application running in the background.
+# Read more: https://github.com/rails/spring
+gem 'spring', platforms: [:ruby]
+gem 'listen', '~> 1.3.1'
 
-  # Gems to make development mode faster and less painful
-  gem 'rails-flog', require: 'flog'
-  gem 'wdm', '>= 0.0.3', platforms: [:mswin, :mswin64]
+# Gems to make development mode faster and less painful
+gem 'rails-flog', require: 'flog'
+gem 'wdm', '>= 0.0.3', platforms: [:mswin, :mswin64]
 
-  # Helps to prevent database slowdowns
-  gem 'lol_dba', require: false
+# Helps to prevent database slowdowns
+gem 'lol_dba', require: false
 
-  # General cleanliness
-  gem 'traceroute', require: false
+# General cleanliness
+gem 'traceroute', require: false
 
-  # bundle exec yardoc generates the API under doc/.
-  # Use yard stats --list-undoc to find what needs documenting.
-  gem 'yard', group: :doc
-end
+# bundle exec yardoc generates the API under doc/.
+# Use yard stats --list-undoc to find what needs documenting.
+gem 'yard', group: :doc
+gem 'email_spec'
+gem 'rspec-html-matchers'
+gem 'should_not'
+gem 'simplecov'
+gem 'shoulda-matchers'
 
-group :test do
-  gem 'email_spec'
-  gem 'rspec-html-matchers'
-  gem 'should_not'
-  gem 'simplecov'
-  gem 'shoulda-matchers'
+# Capybara for feature testing
+gem 'capybara'
+gem 'capybara-selenium'
+gem 'chromedriver-helper'
 
-  # Capybara for feature testing
-  gem 'capybara'
-  gem 'capybara-selenium'
-  gem 'chromedriver-helper'
+# Make screen shots in tests, helps with the debugging of JavaScript tests.
+gem 'capybara-screenshot'
+# Use RSpec for Behaviour testing
+gem 'rspec-rails'
 
-  # Make screen shots in tests, helps with the debugging of JavaScript tests.
-  gem 'capybara-screenshot'
-end
+# Factory Bot for factories
+gem 'factory_bot_rails'
 
-group :development, :test do
-  # Use RSpec for Behaviour testing
-  gem 'rspec-rails'
+# Checks that all translations are used and defined
+gem 'i18n-tasks', require: false
 
-  # Factory Bot for factories
-  gem 'factory_bot_rails'
+# Helps to prevent database consistency mistakes
+gem 'consistency_fail', require: false
 
-  # Checks that all translations are used and defined
-  gem 'i18n-tasks', require: false
+# Prevent N+1 queries.
+gem 'bullet', '>= 4.14.9'
 
-  # Helps to prevent database consistency mistakes
-  gem 'consistency_fail', require: false
+gem 'parallel_tests'
 
-  # Prevent N+1 queries.
-  gem 'bullet', '>= 4.14.9'
-
-  gem 'parallel_tests'
-
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platform: :mri
-end
-
-group :ci do
-  # Code Coverage reporters
-  gem 'codeclimate-test-reporter'
-  gem 'codecov', :require => false
-  gem 'rspec-retry'
-end
-
+# Call 'byebug' anywhere in the code to stop execution and get a debugger console
+gem 'byebug', platform: :mri
+# Code Coverage reporters
+gem 'codeclimate-test-reporter'
+gem 'codecov', :require => false
+gem 'rspec-retry'
 # This is used only when producing Production assets. Deals with things like minifying JavaScript
 # source files/image assets.
-group :assets do
-  # Compress image assets
-  gem 'image_optim_rails'
-end
-
-group :production do
-  # Puma will be our app server
-  gem 'puma'
-end
-
+# Compress image assets
+gem 'image_optim_rails'
+# Puma will be our app server
+gem 'puma'
 # Multitenancy
 gem 'acts_as_tenant'
 
@@ -183,7 +165,7 @@ gem 'rails_utils', '>= 3.3.3'
 
 # Themes for instances
 gem 'themes_on_rails', '>= 0.3.1', github: 'Coursemology/themes_on_rails',
-                                   branch: 'cache-theme-templates'
+branch: 'cache-theme-templates'
 
 # Forms made easy for Rails
 gem 'simple_form'

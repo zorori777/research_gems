@@ -100,66 +100,55 @@ gem 'aws-sdk', '~> 2'
 gem 'http_accept_language'
 gem 'routing-filter', '~> 0.6.0'
 
-group :production do
-  # Gem used to handle image uploading
-  gem 'fog-aws'
+# Gem used to handle image uploading
+gem 'fog-aws'
 
-  # Workers, forks and all that jazz
-  gem 'unicorn'
+# Workers, forks and all that jazz
+gem 'unicorn'
 
-  # Enabling Gzip on Heroku
-  # If you don't use Heroku, please comment the line below.
-  gem 'heroku-deflater', '>= 0.4.1'
+# Enabling Gzip on Heroku
+# If you don't use Heroku, please comment the line below.
+gem 'heroku-deflater', '>= 0.4.1'
 
-  # Make heroku serve static assets and loggin with stdout
-  #gem 'rails_on_heroku'
-  gem 'rails_12factor'
+# Make heroku serve static assets and loggin with stdout
+#gem 'rails_on_heroku'
+gem 'rails_12factor'
 
-  # Monitoring with the new new relic
-  gem 'newrelic_rpm', '~> 3.18.1.330'
+# Monitoring with the new new relic
+gem 'newrelic_rpm', '~> 3.18.1.330'
 
-  gem "activerecord-nulldb-adapter"
+gem "activerecord-nulldb-adapter"
 
-  # Using dalli and memcachier have not presented significative performance gains
-  # Probably this is due to our pattern of cache usage
-  # + the lack of concurrent procs in our deploy
-  #gem 'memcachier'
-  #gem 'dalli'
-end
-group :development do
-  gem 'web-console'
-  gem "rails-erd"
-  gem "letter_opener"
-  gem 'foreman'
-  gem 'better_errors'
-  gem 'binding_of_caller'
-  gem 'thin'
-  # Uncomment only for optimization, should be commented on master branch
-  # gem 'rack-mini-profiler'
-  # gem 'ruby-prof'
-end
-
-group :test, :development do
-  gem 'rspec-rails'
-  gem 'rspec-mocks'
-  gem 'rspec-its'
-  gem 'rspec-collection_matchers'
-  gem 'pry'
-  gem 'jasmine-rails'
-end
-
-group :test do
-  gem 'zonebie'
-  gem 'fakeweb', github: 'SamMolokanov/fakeweb', branch: 'ruby-2-4-1-support'
-  gem 'poltergeist'
-  gem 'launchy'
-  gem 'database_cleaner'
-  gem 'shoulda'
-  gem 'factory_girl_rails'
-  gem 'capybara'
-  gem 'selenium-webdriver'
-end
-
+# Using dalli and memcachier have not presented significative performance gains
+# Probably this is due to our pattern of cache usage
+# + the lack of concurrent procs in our deploy
+#gem 'memcachier'
+#gem 'dalli'
+gem 'web-console'
+gem "rails-erd"
+gem "letter_opener"
+gem 'foreman'
+gem 'better_errors'
+gem 'binding_of_caller'
+gem 'thin'
+# Uncomment only for optimization, should be commented on master branch
+# gem 'rack-mini-profiler'
+# gem 'ruby-prof'
+gem 'rspec-rails'
+gem 'rspec-mocks'
+gem 'rspec-its'
+gem 'rspec-collection_matchers'
+gem 'pry'
+gem 'jasmine-rails'
+gem 'zonebie'
+gem 'fakeweb', github: 'SamMolokanov/fakeweb', branch: 'ruby-2-4-1-support'
+gem 'poltergeist'
+gem 'launchy'
+gem 'database_cleaner'
+gem 'shoulda'
+gem 'factory_girl_rails'
+gem 'capybara'
+gem 'selenium-webdriver'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'sass-rails'

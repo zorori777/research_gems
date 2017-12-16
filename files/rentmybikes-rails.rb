@@ -20,10 +20,8 @@ gem 'uglifier', '>= 1.3.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
-group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
-end
+# bundle exec rake doc:rails generates the API under doc/api.
+gem 'sdoc', require: false
 
 # devise for authentication
 gem 'devise'
@@ -37,10 +35,7 @@ gem 'therubyracer'
 
 gem 'less-rails'
 
-group :development do
-  gem 'quiet_assets'
-  gem 'foreman'
-  gem 'dotenv-rails'
-end
-
+gem 'quiet_assets'
+gem 'foreman'
+gem 'dotenv-rails'
 gem 'balanced', '~> 1.0'

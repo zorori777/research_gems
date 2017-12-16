@@ -78,63 +78,46 @@ gem 'parallel_tests', group: [:development, :test]
 
 # if these are ever in your way, you can remove these lines.
 # they mostly serve as a version-restriction
-group :dependencies do
-  gem 'nokogiri', '< 1.7.0' # requires ruby 2.1
-  gem 'addressable', '< 2.5' # requires ruby 2.0
-  gem 'sort_alphabetical', '< 1.1.0' # requires ruby 2.0
-end
-
-group :development, :test do
-  gem 'binding_of_caller'
-  gem 'rspec-rails'
-  gem 'codez-tarantula', require: 'tarantula-rails3'
-  gem 'pry-rails'
-  gem 'pry-debugger', platforms: :ruby_19
-  gem 'pry-doc'
-  # gem 'pry-byebug', platforms: [:ruby_20, :ruby_21]
-end
-
-group :development do
-  gem 'bullet'
-  gem 'quiet_assets'
-  gem 'redcarpet'
-  gem 'request_profiler'
-end
-
-group :test do
-  gem 'capybara'
-  gem 'capybara-screenshot'
-  gem 'database_cleaner'
-  gem 'fabrication'
-  gem 'headless'
-  gem 'launchy'
-  gem 'rspec-its'
-  gem 'rspec-collection_matchers'
-  gem 'selenium-webdriver', '2.51.0' # 3.2.2 fails with "Unable to find Mozilla geckodriver"
-  gem 'pdf-inspector', require: 'pdf/inspector'
-end
-
-group :console do
-  gem 'awesome_print'
-  gem 'hirb'
-  gem 'mailcatcher'
-  gem 'pry-remote'
-  gem 'pry-stack_explorer'
-  gem 'rdoc-tags'
-  gem 'spring-commands-rspec'
-  gem 'wirble'
-end
-
-group :metrics do
-  gem 'annotate'
-  gem 'brakeman'
-  gem 'ci_reporter_rspec'
-  gem 'rails-erd'
-  gem 'rubocop'
-  gem 'rubocop-checkstyle_formatter'
-  gem 'ruby-prof'
-  gem 'simplecov-rcov'
-end
+gem 'nokogiri', '< 1.7.0' # requires ruby 2.1
+gem 'addressable', '< 2.5' # requires ruby 2.0
+gem 'sort_alphabetical', '< 1.1.0' # requires ruby 2.0
+gem 'binding_of_caller'
+gem 'rspec-rails'
+gem 'codez-tarantula', require: 'tarantula-rails3'
+gem 'pry-rails'
+gem 'pry-debugger', platforms: :ruby_19
+gem 'pry-doc'
+# gem 'pry-byebug', platforms: [:ruby_20, :ruby_21]
+gem 'bullet'
+gem 'quiet_assets'
+gem 'redcarpet'
+gem 'request_profiler'
+gem 'capybara'
+gem 'capybara-screenshot'
+gem 'database_cleaner'
+gem 'fabrication'
+gem 'headless'
+gem 'launchy'
+gem 'rspec-its'
+gem 'rspec-collection_matchers'
+gem 'selenium-webdriver', '2.51.0' # 3.2.2 fails with "Unable to find Mozilla geckodriver"
+gem 'pdf-inspector', require: 'pdf/inspector'
+gem 'awesome_print'
+gem 'hirb'
+gem 'mailcatcher'
+gem 'pry-remote'
+gem 'pry-stack_explorer'
+gem 'rdoc-tags'
+gem 'spring-commands-rspec'
+gem 'wirble'
+gem 'annotate'
+gem 'brakeman'
+gem 'ci_reporter_rspec'
+gem 'rails-erd'
+gem 'rubocop'
+gem 'rubocop-checkstyle_formatter'
+gem 'ruby-prof'
+gem 'simplecov-rcov'
 
 # Include the wagon gems you want attached in Wagonfile.
 # Do not check Wagonfile into source control.

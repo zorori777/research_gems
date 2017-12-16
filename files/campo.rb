@@ -80,25 +80,19 @@ gem 'hiredis', '~> 0.4.5'
 # Background jobs
 gem 'resque', '~> 1.25.1'
 gem 'resque_mailer', '~> 2.2.6'
+# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/jonleighton/spring
+gem 'spring'
 
-group :development do
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/jonleighton/spring
-  gem 'spring'
+# Livereload
+gem 'guard-livereload', require: false
+gem 'rack-livereload'
 
-  # Livereload
-  gem 'guard-livereload', require: false
-  gem 'rack-livereload'
+# i18n extractor
+gem 'i18n-tasks', '~> 0.3.2'
 
-  # i18n extractor
-  gem 'i18n-tasks', '~> 0.3.2'
-
-  # Deploy tool
-  gem 'capistrano', '~> 3.1.0'
-  gem 'capistrano-rvm', '~> 0.1.1'
-  gem 'capistrano-bundler', '~> 1.1.2'
-  gem 'capistrano-rails', '~> 1.0.0'
-end
-
-group :development, :test do
-  gem 'factory_girl_rails', '~> 4.3.0'
-end
+# Deploy tool
+gem 'capistrano', '~> 3.1.0'
+gem 'capistrano-rvm', '~> 0.1.1'
+gem 'capistrano-bundler', '~> 1.1.2'
+gem 'capistrano-rails', '~> 1.0.0'
+gem 'factory_girl_rails', '~> 4.3.0'

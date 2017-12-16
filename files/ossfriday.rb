@@ -20,29 +20,18 @@ gem "turbolinks"
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 gem "uglifier"
 
-group :development, :test do
-  gem "byebug", platform: :mri
-end
-
-group :development do
-  gem "awesome_print"
-  gem "listen"
-  gem "rubocop"
-  gem "spring"
-  gem "spring-watcher-listen"
-  gem "web-console"
-end
-
-group :production do
-  gem "connection_pool"
-  gem "dalli"
-  gem "heroku-deflater"
-  gem "kgio"
-  gem "memcachier"
-  gem "rack-cache"
-end
-
-group :test do
-  gem "codecov", require: false
-  gem "vcr", require: false
-end
+gem "byebug", platform: :mri
+gem "awesome_print"
+gem "listen"
+gem "rubocop"
+gem "spring"
+gem "spring-watcher-listen"
+gem "web-console"
+gem "connection_pool"
+gem "dalli"
+gem "heroku-deflater"
+gem "kgio"
+gem "memcachier"
+gem "rack-cache"
+gem "codecov", require: false
+gem "vcr", require: false

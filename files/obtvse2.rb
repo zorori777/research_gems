@@ -29,31 +29,23 @@ gem 'chronic', '~> 0.8'
 gem 'stringex', '~> 2', github: 'rsl/stringex'
 
 platform :jruby do
-  gem 'trinidad'
-  gem 'activerecord-jdbcpostgresql-adapter'
+gem 'trinidad'
+gem 'activerecord-jdbcpostgresql-adapter'
 end
 
 platform :ruby do
-  gem 'pg', '~> 0.14'
-  gem 'unicorn'
+gem 'pg', '~> 0.14'
+gem 'unicorn'
 end
 
-group :production do
-  gem 'aws-sdk', '~> 1.3.4'
-end
-
-group :development, :test do
-  gem 'sqlite3', '~> 1', platform: [:ruby, :mswin, :mingw]
-  gem 'capistrano'
-  gem 'capistrano_colors'
-  gem 'quiet_assets'
-  gem 'guard-livereload', require: false
-  gem 'rack-livereload'
-  gem 'rb-fsevent', require: false
-end
-
-group :assets do
-  gem 'sass-rails'
-  gem 'coffee-rails'
-  gem 'uglifier'
-end
+gem 'aws-sdk', '~> 1.3.4'
+gem 'sqlite3', '~> 1', platform: [:ruby, :mswin, :mingw]
+gem 'capistrano'
+gem 'capistrano_colors'
+gem 'quiet_assets'
+gem 'guard-livereload', require: false
+gem 'rack-livereload'
+gem 'rb-fsevent', require: false
+gem 'sass-rails'
+gem 'coffee-rails'
+gem 'uglifier'

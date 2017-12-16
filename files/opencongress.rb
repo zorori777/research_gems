@@ -113,52 +113,38 @@ gem 'pdfkit'
 
 gem 'awesome_print'
 
-group :deployment do
-  gem 'capistrano'
-  gem 'capistrano-ext'
-end
-
-group :production do
-  # new relic RPM
-  gem 'newrelic_rpm'
-end
-
+gem 'capistrano'
+gem 'capistrano-ext'
+# new relic RPM
+gem 'newrelic_rpm'
 gem 'sentry-raven', :git => "https://github.com/getsentry/raven-ruby.git", :ref => "d62c61ca836c851847105ef77c61718cac89abb8"
 
-group :production, :staging do
-  gem 'unicorn'
-end
-
-group :test, :development do
-  #gem 'debugger'
-  gem 'annotate',             '>=2.6.0'
-  gem 'pry'
-  gem 'pry-nav'
-  gem 'pry-rescue'
-  gem 'pry-stack_explorer'
-  gem 'pry-debugger'
-  gem 'rails_best_practices'
-  gem 'simplecov',            :require => false
-  gem 'guard'
-  gem 'guard-livereload'
-  gem 'rack-mini-profiler'
-  gem 'redis'
-  gem 'rspec-rails'
-  gem 'random_data'
-end
-
-group :test do
-  gem 'silent-postgres'  # Quieter postgres log messages
-  gem 'database_cleaner'
-  gem 'vcr'
-  gem 'fuubar'
-  gem 'poltergeist'  # Requires PhantomJS >= 1.8.1
-  gem 'cucumber'
-  gem 'cucumber-rails',       :require => false
-  gem 'fuubar-cucumber',      :git => 'git://github.com/martinciu/fuubar-cucumber.git'
-  gem 'webmock',              '~> 1.9.0'
-  gem 'selenium-client'
-  gem 'capybara'
-  gem 'launchy'
-  gem 'spork'
-end
+gem 'unicorn'
+#gem 'debugger'
+gem 'annotate',             '>=2.6.0'
+gem 'pry'
+gem 'pry-nav'
+gem 'pry-rescue'
+gem 'pry-stack_explorer'
+gem 'pry-debugger'
+gem 'rails_best_practices'
+gem 'simplecov',            :require => false
+gem 'guard'
+gem 'guard-livereload'
+gem 'rack-mini-profiler'
+gem 'redis'
+gem 'rspec-rails'
+gem 'random_data'
+gem 'silent-postgres'  # Quieter postgres log messages
+gem 'database_cleaner'
+gem 'vcr'
+gem 'fuubar'
+gem 'poltergeist'  # Requires PhantomJS >= 1.8.1
+gem 'cucumber'
+gem 'cucumber-rails',       :require => false
+gem 'fuubar-cucumber',      :git => 'git://github.com/martinciu/fuubar-cucumber.git'
+gem 'webmock',              '~> 1.9.0'
+gem 'selenium-client'
+gem 'capybara'
+gem 'launchy'
+gem 'spork'

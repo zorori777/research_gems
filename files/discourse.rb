@@ -6,23 +6,23 @@ source 'https://rubygems.org'
 gem 'bootsnap', require: false
 
 def rails_master?
-  ENV["RAILS_MASTER"] == '1'
+ENV["RAILS_MASTER"] == '1'
 end
 
 if rails_master?
-  gem 'arel', git: 'https://github.com/rails/arel.git'
-  gem 'rails', git: 'https://github.com/rails/rails.git'
-  gem 'seed-fu', git: 'https://github.com/SamSaffron/seed-fu.git', branch: 'discourse'
+gem 'arel', git: 'https://github.com/rails/arel.git'
+gem 'rails', git: 'https://github.com/rails/rails.git'
+gem 'seed-fu', git: 'https://github.com/SamSaffron/seed-fu.git', branch: 'discourse'
 else
-  gem 'actionmailer', '~> 5.1'
-  gem 'actionpack', '~> 5.1'
-  gem 'actionview', '~> 5.1'
-  gem 'activemodel', '~> 5.1'
-  gem 'activerecord', '~> 5.1'
-  gem 'activesupport', '~> 5.1'
-  gem 'railties', '~> 5.1'
-  gem 'sprockets-rails'
-  gem 'seed-fu'
+gem 'actionmailer', '~> 5.1'
+gem 'actionpack', '~> 5.1'
+gem 'actionview', '~> 5.1'
+gem 'activemodel', '~> 5.1'
+gem 'activerecord', '~> 5.1'
+gem 'activesupport', '~> 5.1'
+gem 'railties', '~> 5.1'
+gem 'sprockets-rails'
+gem 'seed-fu'
 end
 
 gem 'mail'
@@ -103,45 +103,33 @@ gem 'rack-protection' # security
 
 # Gems used only for assets and not required in production environments by default.
 # Allow everywhere for now cause we are allowing asset debugging in production
-group :assets do
-  gem 'uglifier'
-  gem 'rtlit', require: false # for css rtling
-end
-
-group :test do
-  gem 'webmock', require: false
-  gem 'fakeweb', '~> 1.3.0', require: false
-  gem 'minitest', require: false
-end
-
-group :test, :development do
-  gem 'rspec'
-  gem 'mock_redis'
-  gem 'listen', require: false
-  gem 'certified', require: false
-  # later appears to break Fabricate(:topic, category: category)
-  gem 'fabrication', '2.9.8', require: false
-  gem 'discourse-qunit-rails', require: 'qunit-rails'
-  gem 'mocha', require: false
-  gem 'rb-fsevent', require: RUBY_PLATFORM =~ /darwin/i ? 'rb-fsevent' : false
-  gem 'rb-inotify', '~> 0.9', require: RUBY_PLATFORM =~ /linux/i ? 'rb-inotify' : false
-  gem 'rspec-rails', require: false
-  gem 'shoulda', require: false
-  gem 'rspec-html-matchers'
-  gem 'pry-nav'
-  gem 'byebug', require: ENV['RM_INFO'].nil?
-  gem 'rubocop', require: false
-end
-
-group :development do
-  gem 'ruby-prof', require: false
-  gem 'bullet', require: !!ENV['BULLET']
-  gem 'better_errors'
-  gem 'binding_of_caller'
-  gem 'annotate'
-  gem 'foreman', require: false
-end
-
+gem 'uglifier'
+gem 'rtlit', require: false # for css rtling
+gem 'webmock', require: false
+gem 'fakeweb', '~> 1.3.0', require: false
+gem 'minitest', require: false
+gem 'rspec'
+gem 'mock_redis'
+gem 'listen', require: false
+gem 'certified', require: false
+# later appears to break Fabricate(:topic, category: category)
+gem 'fabrication', '2.9.8', require: false
+gem 'discourse-qunit-rails', require: 'qunit-rails'
+gem 'mocha', require: false
+gem 'rb-fsevent', require: RUBY_PLATFORM =~ /darwin/i ? 'rb-fsevent' : false
+gem 'rb-inotify', '~> 0.9', require: RUBY_PLATFORM =~ /linux/i ? 'rb-inotify' : false
+gem 'rspec-rails', require: false
+gem 'shoulda', require: false
+gem 'rspec-html-matchers'
+gem 'pry-nav'
+gem 'byebug', require: ENV['RM_INFO'].nil?
+gem 'rubocop', require: false
+gem 'ruby-prof', require: false
+gem 'bullet', require: !!ENV['BULLET']
+gem 'better_errors'
+gem 'binding_of_caller'
+gem 'annotate'
+gem 'foreman', require: false
 # this is an optional gem, it provides a high performance replacement
 # to String#blank? a method that is called quite frequently in current
 # ActiveRecord, this may change in the future
@@ -180,8 +168,8 @@ gem 'logster'
 gem 'sassc', require: false
 
 if ENV["IMPORT"] == "1"
-  gem 'mysql2'
-  gem 'redcarpet'
-  gem 'sqlite3', '~> 1.3.13'
-  gem 'ruby-bbcode-to-md', github: 'nlalonde/ruby-bbcode-to-md'
+gem 'mysql2'
+gem 'redcarpet'
+gem 'sqlite3', '~> 1.3.13'
+gem 'ruby-bbcode-to-md', github: 'nlalonde/ruby-bbcode-to-md'
 end

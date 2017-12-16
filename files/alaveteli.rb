@@ -154,36 +154,27 @@ gem 'therubyracer', '~> 0.12.0'
 
 # Feature flags
 gem 'alaveteli_features', :path => 'gems/alaveteli_features'
-
-group :test do
-  gem 'fakeweb', '~> 1.3.0'
-  gem 'coveralls', '~> 0.8.0', :require => false
-    gem 'tins', '~> 1.3.0', '< 1.3.1'
-    gem 'term-ansicolor', '~> 1.3.0', '< 1.4'
-  gem 'capybara', '~> 2.15.0'
-  gem 'delorean', '~> 2.1.0'
-  gem 'test_after_commit', '~> 0.4.2'
-end
-
-group :test, :development do
-  gem 'bullet', '~> 5.5.0'
-  gem 'factory_girl_rails', '~> 4.8.0'
-  gem 'oink', '~> 0.10.1'
-  gem 'rspec-activemodel-mocks', '~> 1.0.0'
-  gem 'rspec-rails', '~> 3.5.0'
-  gem 'pry', '~> 0.10.0'
-  gem 'pry-debugger', '~> 0.2.0', :platforms => :ruby_19
-    gem 'public_suffix', '~> 1.4.0', '< 1.5.0'
-end
-
-group :development do
-  gem 'annotate', '~> 2.7.0'
-  gem 'capistrano', '~> 2.15.0', '< 3.0.0'
-    gem 'net-ssh', '~> 2.9.0', '< 3.0.0'
-  gem 'mailcatcher', '~> 0.6.0'
-  gem 'quiet_assets', '~> 1.1.0'
-  gem 'launchy', '~> 2.4.0'
-  gem 'spring', '~> 2.0.0'
-  gem 'spring-commands-rspec', '~> 1.0.0'
-  gem 'web-console', '~> 2.3.0', '< 3.0.0'
-end
+gem 'fakeweb', '~> 1.3.0'
+gem 'coveralls', '~> 0.8.0', :require => false
+gem 'tins', '~> 1.3.0', '< 1.3.1'
+gem 'term-ansicolor', '~> 1.3.0', '< 1.4'
+gem 'capybara', '~> 2.15.0'
+gem 'delorean', '~> 2.1.0'
+gem 'test_after_commit', '~> 0.4.2'
+gem 'bullet', '~> 5.5.0'
+gem 'factory_girl_rails', '~> 4.8.0'
+gem 'oink', '~> 0.10.1'
+gem 'rspec-activemodel-mocks', '~> 1.0.0'
+gem 'rspec-rails', '~> 3.5.0'
+gem 'pry', '~> 0.10.0'
+gem 'pry-debugger', '~> 0.2.0', :platforms => :ruby_19
+gem 'public_suffix', '~> 1.4.0', '< 1.5.0'
+gem 'annotate', '~> 2.7.0'
+gem 'capistrano', '~> 2.15.0', '< 3.0.0'
+gem 'net-ssh', '~> 2.9.0', '< 3.0.0'
+gem 'mailcatcher', '~> 0.6.0'
+gem 'quiet_assets', '~> 1.1.0'
+gem 'launchy', '~> 2.4.0'
+gem 'spring', '~> 2.0.0'
+gem 'spring-commands-rspec', '~> 1.0.0'
+gem 'web-console', '~> 2.3.0', '< 3.0.0'

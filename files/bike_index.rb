@@ -92,52 +92,35 @@ gem 'responders', '~> 2.0' # required because of class level respond_to blocks (
 gem 'thor', '0.19.1' # Locking it; http://stackoverflow.com/questions/40986923/meaning-of-expected-string-default-value-for-on-ruby-on-rails
 
 gem 'bundler', '>= 1.8.4' # required for rails-assets.org - JS and CSS assets
-source 'https://rails-assets.org' do # JS land is crazy, so lock everything
-  gem 'rails-assets-lodash', '~> 4.9.0'
-  gem 'rails-assets-tether', '~> 1.1.0' # Required by bootstrap 4, but not included :(
-  gem 'rails-assets-mustache', '~> 2.2.1'
-  gem 'rails-assets-jquery.dirtyforms', '~> 2.0.0' # Alert on attempts to leave with dirt on forms
-  gem 'rails-assets-selectize', '~> 0.12.1' # Manually configured scss
-  gem 'rails-assets-select2', '~> 4.0.3' # Use select2 for a few things, it's a bit better sometimes
-  gem 'rails-assets-pikaday', '~> 1.4.0' # Datepicker
-  gem 'rails-assets-Stickyfill', '~> 1.1.3' # Affix bike edit menu
-  gem 'rails-assets-mailcheck', '~> 1.1.2' # Check for common email errors
-  gem 'rails-assets-waypoints', '~> 3.1.1' # For documentation pages
-  # Sortable breaks assets:precompile, so it's included manually
-  # gem 'rails-assets-jquery-sortable', '~> 0.9.12' # Sort photo order
-end
-
+gem 'rails-assets-lodash', '~> 4.9.0'
+gem 'rails-assets-tether', '~> 1.1.0' # Required by bootstrap 4, but not included :(
+gem 'rails-assets-mustache', '~> 2.2.1'
+gem 'rails-assets-jquery.dirtyforms', '~> 2.0.0' # Alert on attempts to leave with dirt on forms
+gem 'rails-assets-selectize', '~> 0.12.1' # Manually configured scss
+gem 'rails-assets-select2', '~> 4.0.3' # Use select2 for a few things, it's a bit better sometimes
+gem 'rails-assets-pikaday', '~> 1.4.0' # Datepicker
+gem 'rails-assets-Stickyfill', '~> 1.1.3' # Affix bike edit menu
+gem 'rails-assets-mailcheck', '~> 1.1.2' # Check for common email errors
+gem 'rails-assets-waypoints', '~> 3.1.1' # For documentation pages
 gem 'grape_logging' # Grape logging. Also how we pass it to lograge. Always used, not just in Prod
 gem 'lograge' # Structure log data, put it in single lines to improve the functionality
 gem 'logstash-event' # Use logstash format for logging data
-group :production do
-  gem 'honeybadger', '~> 2.0' # Error monitoring
-  # gem 'librato-rails' # Monitoring and display
-end
-
-group :development do
-  # gem 'test-unit', '~> 3.0'
-  gem 'rerun'
-end
-
-group :development, :test do
-  gem 'rb-fsevent', '~> 0.9.1'
-  gem 'rspec', '~> 3.3.0'
-  gem 'rspec-rails', '~> 3.3.0'
-  gem 'shoulda-matchers', '~> 2.8.0'
-  gem 'foreman'
-  gem 'database_cleaner'
-  gem 'dotenv-rails'
-  gem 'rack-livereload'
-end
-
-group :test do
-  gem 'factory_girl_rails'
-  gem 'codeclimate-test-reporter', require: nil
-  gem 'rspec-sidekiq'
-  gem 'pry'
-  gem 'guard', '~> 2.13.0', require: false
-  gem 'guard-rspec', '~> 4.6.4', require: false
-  gem 'guard-rubocop', require: false
-  gem 'guard-livereload', require: false
-end
+gem 'honeybadger', '~> 2.0' # Error monitoring
+# gem 'test-unit', '~> 3.0'
+gem 'rerun'
+gem 'rb-fsevent', '~> 0.9.1'
+gem 'rspec', '~> 3.3.0'
+gem 'rspec-rails', '~> 3.3.0'
+gem 'shoulda-matchers', '~> 2.8.0'
+gem 'foreman'
+gem 'database_cleaner'
+gem 'dotenv-rails'
+gem 'rack-livereload'
+gem 'factory_girl_rails'
+gem 'codeclimate-test-reporter', require: nil
+gem 'rspec-sidekiq'
+gem 'pry'
+gem 'guard', '~> 2.13.0', require: false
+gem 'guard-rspec', '~> 4.6.4', require: false
+gem 'guard-rubocop', require: false
+gem 'guard-livereload', require: false

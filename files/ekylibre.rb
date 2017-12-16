@@ -197,65 +197,56 @@ gem 'luhn'
 # For interval selector
 gem 'bootstrap-slider-rails'
 
-group :development do
-  gem 'bullet', '< 5.6.0'
+gem 'bullet', '< 5.6.0'
 
-  gem 'quiet_assets'
-  # gem 'rack-mini-profiler'
+gem 'quiet_assets'
+# gem 'rack-mini-profiler'
 
-  # Get the time of a process
-  gem 'ruby-prof'
+# Get the time of a process
+gem 'ruby-prof'
 
-  # Code metrics
-  gem 'rails_best_practices', require: false
-  gem 'rubocop', '~> 0.49.1', require: false
+# Code metrics
+gem 'rails_best_practices', require: false
+gem 'rubocop', '~> 0.49.1', require: false
 
-  # Webservers
-  gem 'thin'
+# Webservers
+gem 'thin'
 
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 3.0'
+# Access an IRB console on exception pages or by using <%= console %> in views
+gem 'web-console', '~> 3.0'
 
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+gem 'spring'
 
-  gem 'letter_opener'
-end
+gem 'letter_opener'
+gem 'pry-byebug'
+# gem 'pry-inline'
+gem 'pry-rails'
+gem 'teaspoon-jasmine'
 
-group :development, :test do
-  gem 'pry-byebug'
-  # gem 'pry-inline'
-  gem 'pry-rails'
-  gem 'teaspoon-jasmine'
+# Parallelize tests
+gem 'parallel_tests'
 
-  # Parallelize tests
-  gem 'parallel_tests'
+# Exception message tips
+gem 'did_you_mean', '~> 0.9', platforms: [:ruby_22]
+gem 'shoulda-context'
 
-  # Exception message tips
-  gem 'did_you_mean', '~> 0.9', platforms: [:ruby_22]
-end
+gem 'capybara'
+gem 'capybara-webkit', '>= 1.14.0'
+gem 'selenium-webdriver'
 
-group :test do
-  gem 'shoulda-context'
+gem 'codacy-coverage', require: false
+gem 'codecov', require: false
+gem 'database_cleaner'
+gem 'simplecov', require: false
 
-  gem 'capybara'
-  gem 'capybara-webkit', '>= 1.14.0'
-  gem 'selenium-webdriver'
+gem 'minitest-reporters'
 
-  gem 'codacy-coverage', require: false
-  gem 'codecov', require: false
-  gem 'database_cleaner'
-  gem 'simplecov', require: false
-
-  gem 'minitest-reporters'
-
-  gem 'factory_bot'
-end
-
+gem 'factory_bot'
 # Load Gemfile.local, Gemfile.plugins, plugins', and custom Gemfiles
-gemfiles = Dir.glob File.expand_path('../{Gemfile.local,Gemfile.plugins,plugins/*/Gemfile}', __FILE__)
-gemfiles << ENV['CUSTOM_PLUGIN_GEMFILE'] unless ENV['CUSTOM_PLUGIN_GEMFILE'].nil?
-gemfiles.each do |file|
-  next unless File.readable?(file)
-  eval_gemfile(file)
-end
+# gemfiles = Dir.glob File.expand_path('../{Gemfile.local,Gemfile.plugins,plugins/*/Gemfile}', __FILE__)
+# gemfiles << ENV['CUSTOM_PLUGIN_GEMFILE'] unless ENV['CUSTOM_PLUGIN_GEMFILE'].nil?
+# gemfiles.each do |file|
+# next unless File.readable?(file)
+# eval_gemfile(file)
+# end

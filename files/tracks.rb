@@ -1,5 +1,3 @@
-source 'https://rubygems.org'
-
 gem 'rails', '~> 4.2.6'
 gem 'sass-rails', '~> 5.0'
 gem 'coffee-rails', '~> 4.1.0'
@@ -47,48 +45,40 @@ gem 'bcrypt', '~> 3.1.7'
 gem "bootstrap-sass", "3.3.3"
 gem "font-awesome-sass", "~> 4.5.0"
 
-group :development do
-  gem "spring"
-  gem "spring-commands-cucumber"
-  gem "yard"
+gem "spring"
+gem "spring-commands-cucumber"
+gem "yard"
 
-  gem 'tolk', '~> 1.9.3'
+gem 'tolk', '~> 1.9.3'
 
-  gem "bullet"
-  gem "rack-mini-profiler"
-  gem "rack-dev-mark"
-end
+gem "bullet"
+gem "rack-mini-profiler"
+gem "rack-dev-mark"
+gem 'pry'
+gem "rubocop", "~> 0.41.2", require: false
+# Pull in the fix for rails-dom-testing issue #42
+# TODO: Remove with Rails 5 and rails-dom-testing 2.x
+gem 'rails-dom-testing', github: 'rails/rails-dom-testing', ref: 'a64f30514ee65f172c43f42cfd4500b5e11a561a'
 
-group :development, :test do
-  gem 'pry'
-  gem "rubocop", "~> 0.41.2", require: false
-end
+gem "factory_girl_rails"
+gem "capybara"
+gem "cucumber-rails", :require => false
+gem "rspec-expectations"
+gem "database_cleaner"
+gem "mocha", :require => false
+gem "minitest-stub-const"
 
-group :test do
-  # Pull in the fix for rails-dom-testing issue #42
-  # TODO: Remove with Rails 5 and rails-dom-testing 2.x
-  gem 'rails-dom-testing', github: 'rails/rails-dom-testing', ref: 'a64f30514ee65f172c43f42cfd4500b5e11a561a'
+gem "aruba", ">=0.5.4", :require => false
 
-  gem "factory_girl_rails"
-  gem "capybara"
-  gem "cucumber-rails", :require => false
-  gem "rspec-expectations"
-  gem "database_cleaner"
-  gem "mocha", :require => false
-  gem "minitest-stub-const"
+gem "selenium-webdriver", "~> 2.53"
 
-  gem "aruba", ">=0.5.4", :require => false
+# uncomment to use the webkit option. This depends on Qt being installed
+# gem "capybara-webkit"
 
-  gem "selenium-webdriver", "~> 2.53"
+# uncomment to be able to make screenshots from scenarios
+#gem "capybara-screenshot"
+#gem "launchy"
 
-  # uncomment to use the webkit option. This depends on Qt being installed
-  # gem "capybara-webkit"
-
-  # uncomment to be able to make screenshots from scenarios
-  #gem "capybara-screenshot"
-  #gem "launchy"
-
-  gem "simplecov"
-  # get test coverage info on codeclimate
-  gem "codeclimate-test-reporter", group: :test, require: nil
-end
+gem "simplecov"
+# get test coverage info on codeclimate
+gem "codeclimate-test-reporter", group: :test, require: nil

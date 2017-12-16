@@ -1,47 +1,37 @@
-source 'https://rubygems.org'
 
 gem 'rails', '4.2.8'
 
 gem 'pg'
 
 # Development gems
-group :development do
-    gem 'better_errors'
-    gem 'binding_of_caller'
-    gem 'meta_request'
-    gem 'quiet_assets'
-    gem 'spring'
-    # gem 'rack-mini-profiler'
-    gem 'capistrano', '~> 2.15'
-    gem 'bullet'
-    gem 'thin'
-    gem 'capistrano-sidekiq'
-end
-
-group :test do
-  gem 'rspec-rails'
-  gem 'rspec-collection_matchers'
-  gem 'factory_girl_rails'
-  gem 'capybara'
-  gem 'capybara-screenshot'
-  gem 'aws-sdk' # upload capybara screenshot fails
-  gem 'poltergeist'
-  gem 'database_cleaner'
-  gem 'shoulda-matchers', '2.8.0'
-  gem 'email_spec'
-  gem 'fuubar'
-  gem 'test_after_commit'
-  gem 'timecop'
-end
-
-group :development, :test do
-  gem 'byebug', platform: :mri
-  gem 'pry'
-  gem 'pry-nav'
-  gem 'pry-rails'
-  gem 'mysql2'
-end
-
+gem 'better_errors'
+gem 'binding_of_caller'
+gem 'meta_request'
+gem 'quiet_assets'
+gem 'spring'
+# gem 'rack-mini-profiler'
+gem 'capistrano', '~> 2.15'
+gem 'bullet'
+gem 'thin'
+gem 'capistrano-sidekiq'
+gem 'rspec-rails'
+gem 'rspec-collection_matchers'
+gem 'factory_girl_rails'
+gem 'capybara'
+gem 'capybara-screenshot'
+gem 'aws-sdk' # upload capybara screenshot fails
+gem 'poltergeist'
+gem 'database_cleaner'
+gem 'shoulda-matchers', '2.8.0'
+gem 'email_spec'
+gem 'fuubar'
+gem 'test_after_commit'
+gem 'timecop'
+gem 'byebug', platform: :mri
+gem 'pry'
+gem 'pry-nav'
+gem 'pry-rails'
+gem 'mysql2'
 # Assets
 gem 'sass-rails',   '~> 4.0.0'
 gem 'coffee-rails', '~> 4.0.0'

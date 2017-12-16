@@ -11,19 +11,14 @@ gem 'unicode_utils'
 # Database Adapter
 gem 'pg'
 
-group :development, :test do
-  gem 'debugger' # for ruby < 2.0
-  #gem 'byebug' # for ruby >= 2.0
-end
-
+gem 'debugger' # for ruby < 2.0
+#gem 'byebug' # for ruby >= 2.0
 # Gems used only for assets and not required
 # in production environments by default.
-group :assets do
-  gem 'coffee-rails', '~> 3.2.1'
+gem 'coffee-rails', '~> 3.2.1'
 
-  gem 'uglifier', '>= 1.0.3'
-  gem 'execjs'
-end
+gem 'uglifier', '>= 1.0.3'
+gem 'execjs'
 
 gem 'json'
 gem 'therubyracer'  # comment this line for windows

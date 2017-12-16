@@ -9,35 +9,27 @@ gem 'rails_autolink'
 
 gem 'nokogumbo', '= 1.4.9'
 
-group :development do
-  gem 'capistrano'
-  gem 'capistrano-bundler'
-  gem 'capistrano-rbenv'
-  gem 'capistrano-rails'
-  gem 'better_errors'
-  gem 'silencer'
-  gem 'spring'
-  gem 'benchmark-ips'
-  gem 'xipio'
-  gem 'listen'
-end
-
-group :development, :test do
-  gem 'puma'
-  gem 'minitest'
-  gem 'stripe-ruby-mock', require: 'stripe_mock'
-  gem 'faker'
-  gem 'webmock'
-  gem 'minitest-stub-const'
-  gem 'coveralls', require: false
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'capybara', '~> 2.13'
-  gem 'selenium-webdriver'
-end
-
-group :production do
-  gem "therubyracer", require: 'v8'
-end
+gem 'capistrano'
+gem 'capistrano-bundler'
+gem 'capistrano-rbenv'
+gem 'capistrano-rails'
+gem 'better_errors'
+gem 'silencer'
+gem 'spring'
+gem 'benchmark-ips'
+gem 'xipio'
+gem 'listen'
+gem 'puma'
+gem 'minitest'
+gem 'stripe-ruby-mock', require: 'stripe_mock'
+gem 'faker'
+gem 'webmock'
+gem 'minitest-stub-const'
+gem 'coveralls', require: false
+gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+gem 'capybara', '~> 2.13'
+gem 'selenium-webdriver'
+gem "therubyracer", require: 'v8'
 
 gem 'pg'
 gem 'unicorn'

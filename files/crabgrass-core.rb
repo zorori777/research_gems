@@ -2,8 +2,8 @@ source 'https://rubygems.org'
 
 # ensure github urls use https rather than insecure git protocol.
 git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
-  "https://github.com/#{repo_name}.git"
+repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+"https://github.com/#{repo_name}.git"
 end
 
 
@@ -55,7 +55,7 @@ gem 'prototype-rails', github: 'rails/prototype-rails', branch: '4.2'
 # legacy helper for form_remote_for and link_to_remote
 # there's only a 0.0.0 version out there it seems
 gem 'prototype_legacy_helper', '0.0.0',
-  github: 'rails/prototype_legacy_helper'
+github: 'rails/prototype_legacy_helper'
 
 ##
 # Upgrade pending
@@ -128,7 +128,7 @@ gem 'RedCloth', '~> 4.2'
 
 # extension of the redcloth markup lang
 gem 'greencloth', require: 'greencloth',
-  path: 'vendor/gems/riseuplabs-greencloth-0.1'
+path: 'vendor/gems/riseuplabs-greencloth-0.1'
 
 # media upload post processing has it's own repo
 # version is rather strict for now as api may still change.
@@ -161,63 +161,49 @@ gem 'zip-zip', require: 'zip'
 # Environment specific
 ##
 
-group :production do
-  # js runtime needed to precompile assets
-  # runs independendly - so no version restriction for now
-  # TODO: check if we want this or nodejs
-  gem 'therubyracer'
-end
+# js runtime needed to precompile assets
+# runs independendly - so no version restriction for now
+# TODO: check if we want this or nodejs
+gem 'therubyracer'
+# used to install crontab
+gem 'whenever', require: false
+# used to minify javascript
+gem 'uglifier', '>= 1.3.0', require: false
+# bundle exec rake doc:rails generates the API under doc/api.
+# needed for some rake tasks, but not generally.
+gem 'sdoc', require: false
+gem 'byebug'
 
-group :production, :development do
-  # used to install crontab
-  gem 'whenever', require: false
-  # used to minify javascript
-  gem 'uglifier', '>= 1.3.0', require: false
-end
+##
+## TESTS
+##
 
-group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  # needed for some rake tasks, but not generally.
-  gem 'sdoc', require: false
-end
+gem 'factory_girl_rails'
+gem 'faker', '~> 1.0.0'
 
-group :test, :development do
-  gem 'byebug'
-end
+gem 'minitest', require: false
+gem 'mocha', '~> 1.1', require: false
+#
+# mocha note: mocha must be loaded after the things it needs to patch.
+#             so, we skip the 'require' here, and do it later.
+#
 
-group :test, :ci do
+##
+## INTEGRATION TESTS
+##
 
-  ##
-  ## TESTS
-  ##
+gem 'capybara', require: false
 
-  gem 'factory_girl_rails'
-  gem 'faker', '~> 1.0.0'
+# Capybara driver with javascript capabilities using phantomjs
+# locked to major version for stable API
+gem 'poltergeist', '~> 1.5', require: false
 
-  gem 'minitest', require: false
-  gem 'mocha', '~> 1.1', require: false
-  #
-  # mocha note: mocha must be loaded after the things it needs to patch.
-  #             so, we skip the 'require' here, and do it later.
-  #
+# Headless webkit browser for testing, fast and with javascript
+# Version newer than 1.8 is required by current poltergeist.
+gem 'phantomjs-binaries', '~> 2.1.1', require: false
 
-  ##
-  ## INTEGRATION TESTS
-  ##
-
-  gem 'capybara', require: false
-
-  # Capybara driver with javascript capabilities using phantomjs
-  # locked to major version for stable API
-  gem 'poltergeist', '~> 1.5', require: false
-
-  # Headless webkit browser for testing, fast and with javascript
-  # Version newer than 1.8 is required by current poltergeist.
-  gem 'phantomjs-binaries', '~> 2.1.1', require: false
-
-  # The castle_gates tests are based on sqlite
-  gem 'sqlite3'
-end
+# The castle_gates tests are based on sqlite
+gem 'sqlite3'
 
 gem 'bundler-audit'
 

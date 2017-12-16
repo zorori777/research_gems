@@ -147,52 +147,42 @@ gem "recaptcha", require: "recaptcha/rails"
 
 gem 'best_in_place', '~> 3.0.1'
 
-group :development, :test do
-  # Audit Gemfile for security vulnerabilities
-  gem 'bundler-audit', require: false
-  gem 'byebug'
-  gem 'pry'
-  gem 'pry-byebug'
-  gem 'spring', '~> 1.4.0'
-  gem 'annotate'
-  gem 'brakeman', require: false
-  gem 'rubocop'
-  gem 'scss-lint'
-  gem 'awesome_print'
-end
+# Audit Gemfile for security vulnerabilities
+gem 'bundler-audit', require: false
+gem 'byebug'
+gem 'pry'
+gem 'pry-byebug'
+gem 'spring', '~> 1.4.0'
+gem 'annotate'
+gem 'brakeman', require: false
+gem 'rubocop'
+gem 'scss-lint'
+gem 'awesome_print'
 
 gem 'bulk_insert'
 
-group :development do
-  gem "better_errors"
-  gem 'mailcatcher'
+gem "better_errors"
+gem 'mailcatcher'
 
-  # Check Eager Loading / N+1 query problems
-  gem 'bullet'
+# Check Eager Loading / N+1 query problems
+gem 'bullet'
 
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
-end
+# Access an IRB console on exception pages or by using <%= console %> in views
+gem 'web-console', '~> 2.0'
+gem 'minitest'
+gem 'minitest-reporters'
+gem 'shoulda'
+gem 'factory_girl_rails'
+gem 'capybara'
+gem 'selenium-webdriver'
+gem 'launchy'
+gem "codeclimate-test-reporter",require: nil
+gem 'simplecov', :require => false
 
-group :test do
-  gem 'minitest'
-  gem 'minitest-reporters'
-  gem 'shoulda'
-  gem 'factory_girl_rails'
-  gem 'capybara'
-  gem 'selenium-webdriver'
-  gem 'launchy'
-  gem "codeclimate-test-reporter",require: nil
-  gem 'simplecov', :require => false
-
-  # remove this for Rails 5 because the function is already included
-  gem 'test_after_commit'
-end
-
-group :production do
-  # Uncomment this gem for Heroku:
-  # gem 'rails_12factor'
-  gem 'unicorn'
-end
+# remove this for Rails 5 because the function is already included
+gem 'test_after_commit'
+# Uncomment this gem for Heroku:
+# gem 'rails_12factor'
+gem 'unicorn'
 
 ruby '>= 2.2', '< 3.0'

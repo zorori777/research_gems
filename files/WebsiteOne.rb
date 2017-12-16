@@ -1,5 +1,3 @@
-source 'https://rubygems.org'
-ruby '2.3.1'
 
 gem 'rails', '4.2.10'
 gem 'active_model-errors_details'
@@ -37,9 +35,9 @@ gem 'nearest_time_zone'
 gem 'nokogiri', '1.8.1'
 gem 'octokit'
 gem 'omniauth'
-gem 'omniauth-github', '~> 1.3.0'
+gem 'omniauth-github', '~> 1.1.2'
 gem 'omniauth-gplus', '~> 2.0.1'
-gem 'omniauth-oauth2', '~> 1.4.0'
+gem 'omniauth-oauth2', '~> 1.3.1'
 gem 'paper_trail', '4.0.0'
 gem 'paranoia', '~> 2.4'
 gem 'pg'
@@ -68,59 +66,48 @@ gem 'yt'
 gem 'yui-compressor'
 gem 'youtube_rails'
 
-group :test do
-  gem 'capybara'
-  gem 'capybara-webkit'
-  gem 'capybara-screenshot'
-  gem 'cucumber-rails', require: false
-  gem 'database_cleaner'
-  gem 'delorean'
-  gem 'launchy'
-  gem 'phantomjs', require: 'phantomjs/poltergeist'
-  gem 'poltergeist'
-  gem 'puffing-billy'
-  gem 'selenium-webdriver'
-  gem 'shoulda-matchers', require: false
-  gem 'stripe-ruby-mock', '~> 2.5.0', require: 'stripe_mock'
-  gem 'vcr'
-  gem 'webmock'
-  gem 'webrat'
-  gem 'zeus'
-end
-
-group :development, :test do
-  gem 'awesome_print'
-  gem 'better_errors'
-  gem 'binding_of_caller'
-  gem 'brakeman', require: false
-  gem 'bullet'
-  gem 'bundler-audit', require: false
-  gem 'constant-redefinition'
-  gem 'dotenv-rails'
-  gem 'guard'
-  gem 'guard-cucumber'
-  gem 'guard-livereload'
-  gem 'guard-rspec'
-  gem 'hirb'
-  gem 'jasmine'
-  gem 'jasmine-jquery-rails'
-  gem 'pry-byebug'
-  gem 'pry-rails'
-  gem 'railroady'
-  gem 'rspec'
-  gem 'rspec-activemodel-mocks'
-  gem 'rspec-html-matchers'
-  gem 'rspec-rails'
-  gem 'coveralls', require: false
-  gem 'simplecov'
-end
-
-group :development, :staging, :production do
-  gem 'rack-timeout'
-end
-
-group :production do
-  gem 'airbrake'
-  gem 'newrelic_rpm'
-  gem 'rails_12factor'
-end
+gem 'capybara'
+gem 'capybara-webkit'
+gem 'capybara-screenshot'
+gem 'cucumber-rails', require: false
+gem 'database_cleaner'
+gem 'delorean'
+gem 'launchy'
+gem 'phantomjs', require: 'phantomjs/poltergeist'
+gem 'poltergeist'
+gem 'puffing-billy'
+gem 'selenium-webdriver'
+gem 'shoulda-matchers', require: false
+gem 'stripe-ruby-mock', '~> 2.5.0', require: 'stripe_mock'
+gem 'vcr'
+gem 'webmock'
+gem 'webrat'
+gem 'zeus'
+gem 'awesome_print'
+gem 'better_errors'
+gem 'binding_of_caller'
+gem 'brakeman', require: false
+gem 'bullet'
+gem 'bundler-audit', require: false
+gem 'constant-redefinition'
+gem 'dotenv-rails'
+gem 'guard'
+gem 'guard-cucumber'
+gem 'guard-livereload'
+gem 'guard-rspec'
+gem 'hirb'
+gem 'jasmine'
+gem 'jasmine-jquery-rails'
+gem 'pry-byebug'
+gem 'pry-rails'
+gem 'railroady'
+gem 'rspec'
+gem 'rspec-activemodel-mocks'
+gem 'rspec-html-matchers'
+gem 'rspec-rails'
+gem 'coveralls', require: false
+gem 'simplecov'
+gem 'rack-timeout'
+gem 'airbrake'
+gem 'newrelic_rpm'
+gem 'rails_12factor'

@@ -42,49 +42,38 @@ gem 'uglifier'
 gem 'whenever'
 gem 'yaml_db'
 
-group :development, :test do
-  gem 'coveralls', require: false
-  gem 'fcrepo_wrapper'
-  gem 'faker'
-  gem 'rspec'
-  gem 'rspec-its'
-  gem 'rspec-rails'
-  gem 'rubocop'
-  gem 'rubocop-rspec'
-  gem 'solr_wrapper'
-  gem 'sqlite3'
-  gem 'capybara-screenshot'
-end
+gem 'coveralls', require: false
+gem 'fcrepo_wrapper'
+gem 'faker'
+gem 'rspec'
+gem 'rspec-its'
+gem 'rspec-rails'
+gem 'rubocop'
+gem 'rubocop-rspec'
+gem 'solr_wrapper'
+gem 'sqlite3'
+gem 'capybara-screenshot'
+gem 'better_errors'
+gem 'binding_of_caller'
 
-group :development do
-  gem 'better_errors'
-  gem 'binding_of_caller'
+# Use Capistrano for deployment
+gem 'capistrano', '~> 3.7', require: false
+gem 'capistrano-bundler', '~> 1.2', require: false
+gem 'capistrano-rails', '~> 1.2', require: false
+gem 'capistrano-rbenv', '~> 2.1', require: false
+gem 'capistrano-rbenv-install'
+gem 'capistrano-resque', '~> 0.2.1', require: false
 
-  # Use Capistrano for deployment
-  gem 'capistrano', '~> 3.7', require: false
-  gem 'capistrano-bundler', '~> 1.2', require: false
-  gem 'capistrano-rails', '~> 1.2', require: false
-  gem 'capistrano-rbenv', '~> 2.1', require: false
-  gem 'capistrano-rbenv-install'
-  gem 'capistrano-resque', '~> 0.2.1', require: false
-
-  gem 'unicorn-rails'
-  gem 'xray-rails'
-end
-
-group :test do
-  gem 'capybara'
-  gem 'database_cleaner'
-  gem 'equivalent-xml'
-  gem 'factory_girl_rails', '~> 4.1'
-  gem 'poltergeist', '~> 1.9'
-  gem 'rspec-activemodel-mocks'
-  gem 'selenium-webdriver'
-  gem 'vcr'
-  gem 'webmock'
-end
-
-group :debug do
-  gem 'byebug', require: false
-  gem 'launchy'
-end
+gem 'unicorn-rails'
+gem 'xray-rails'
+gem 'capybara'
+gem 'database_cleaner'
+gem 'equivalent-xml'
+gem 'factory_girl_rails', '~> 4.1'
+gem 'poltergeist', '~> 1.9'
+gem 'rspec-activemodel-mocks'
+gem 'selenium-webdriver'
+gem 'vcr'
+gem 'webmock'
+gem 'byebug', require: false
+gem 'launchy'

@@ -55,44 +55,33 @@ gem 'uglifier', '>= 2.4.0'
 # Angular
 gem 'angular-rails-templates', '~> 0.1.3'
 
-group :development do
-  gem 'taps', :require => false
-  gem 'hirb'
-  gem 'annotate'
-  gem 'pry-rails'
-  gem 'pry-doc'
-  gem 'better_errors'
-  gem 'binding_of_caller'
-  gem 'meta_request'
-  gem 'lol_dba'
-  gem "intellij-coffee-script-debugger", :git => "git://github.com/JetBrains/intellij-coffee-script-debugger.git"
-  #gem 'debugger'
-end
-
-group :development, :test do
-  gem 'rspec-rails'
-  gem 'rspec-activemodel-mocks'
-  gem 'factory_girl_rails'
-  gem 'faker'
-  gem 'populator'
-  # gem 'rspec'       # Seems duplication with rspec-rails present
-  gem 'spork'
-  gem 'shoulda-matchers'
-  gem 'railroady'
-end
-
-group :test do
-  gem 'minitest'
-  gem 'capybara'
-  gem 'database_cleaner'
-  gem 'email_spec'
-end
-
-group :production, :staging do
-  gem 'rails_12factor'
-  gem 'newrelic_rpm', '3.5.5.38'
-  gem 'airbrake'
-  gem 'prerender_rails'
-  gem 'fog'
-  gem 'ngmin-rails', '~> 0.4.0'
-end
+gem 'taps', :require => false
+gem 'hirb'
+gem 'annotate'
+gem 'pry-rails'
+gem 'pry-doc'
+gem 'better_errors'
+gem 'binding_of_caller'
+gem 'meta_request'
+gem 'lol_dba'
+gem "intellij-coffee-script-debugger", :git => "git://github.com/JetBrains/intellij-coffee-script-debugger.git"
+#gem 'debugger'
+gem 'rspec-rails'
+gem 'rspec-activemodel-mocks'
+gem 'factory_girl_rails'
+gem 'faker'
+gem 'populator'
+# gem 'rspec'       # Seems duplication with rspec-rails present
+gem 'spork'
+gem 'shoulda-matchers'
+gem 'railroady'
+gem 'minitest'
+gem 'capybara'
+gem 'database_cleaner'
+gem 'email_spec'
+gem 'rails_12factor'
+gem 'newrelic_rpm', '3.5.5.38'
+gem 'airbrake'
+gem 'prerender_rails'
+gem 'fog'
+gem 'ngmin-rails', '~> 0.4.0'

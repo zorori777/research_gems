@@ -4,11 +4,8 @@ ruby ">=2.4.1"
 
 gem 'rails', '~> 4.0'
 
-group :development, :test do
-  gem 'pry'
-  gem 'pry-byebug', :platforms => [ :mri_20, :mri_21, :mri_22 ]
-end
-
+gem 'pry'
+gem 'pry-byebug', :platforms => [ :mri_20, :mri_21, :mri_22 ]
 gem 'web-console', '~> 2.0', :group => :development
 
 gem 'protected_attributes'
@@ -28,10 +25,5 @@ gem 'foreman'
 gem 'unicorn'
 gem 'jquery-rails'
 
-group :production do
-  gem 'pg'
-end
-
-group :private do
-  gem "sqlite3"
-end
+gem 'pg'
+gem "sqlite3"

@@ -43,53 +43,35 @@ gem 'jbuilder'
 gem 'draper'
 gem 'dalli'
 gem 'pg_search'
-
-group :development do
-  gem 'thin'
-  gem 'quiet_assets'
-  gem 'guard-rspec'
-  gem 'guard-cucumber'
-  gem 'guard-livereload', require: false
-  gem 'annotate'
-  gem "better_errors"
-  gem "binding_of_caller"
-  gem 'spring'
-  gem "spring-commands-rspec"
-  gem "spring-commands-cucumber"
-  # Livereload seemed to be causing me errors. Feel free to uncomment if needed.
-  # You'll also need to uncomment the line in development.rb. -Jon Lemmon
-  # gem "rack-livereload"
-end
-
-group :development, :test do
-  gem 'rspec-rails', '~> 3.0'
-  gem 'capybara'
-  gem 'capybara-email'
-  gem 'poltergeist'
-  gem 'faker'
-  gem 'factory_girl_rails', '~> 4.4.0'
-  gem 'launchy'
-  gem 'pry-rails'
-  gem 'debugger', :platforms => [:mingw_19, :ruby_19]
-  gem 'byebug', :platforms => [:mingw_20, :mingw_21, :ruby_20, :ruby_21]
-  gem 'pry-byebug', :platforms => [:mingw_20, :mingw_21, :ruby_20, :ruby_21]
-end
-
-group :test do
-  gem 'database_cleaner'
-  gem 'cucumber-rails', :require => false
-  gem 'shoulda-matchers', require: false
-  gem 'timecop'
-end
-
-# Production monitoring gems
-# (too annoying to stick into :production group, so i left them here -JL)
+gem 'thin'
+gem 'quiet_assets'
+gem 'guard-rspec'
+gem 'guard-cucumber'
+gem 'guard-livereload', require: false
+gem 'annotate'
+gem "better_errors"
+gem "binding_of_caller"
+gem 'spring'
+gem "spring-commands-rspec"
+gem "spring-commands-cucumber"
+gem 'rspec-rails', '~> 3.0'
+gem 'capybara'
+gem 'capybara-email'
+gem 'poltergeist'
+gem 'faker'
+gem 'factory_girl_rails', '~> 4.4.0'
+gem 'launchy'
+gem 'pry-rails'
+gem 'debugger', :platforms => [:mingw_19, :ruby_19]
+gem 'byebug', :platforms => [:mingw_20, :mingw_21, :ruby_20, :ruby_21]
+gem 'pry-byebug', :platforms => [:mingw_20, :mingw_21, :ruby_20, :ruby_21]
+gem 'database_cleaner'
+gem 'cucumber-rails', :require => false
+gem 'shoulda-matchers', require: false
+gem 'timecop'
 gem 'raygun4ruby'
 gem 'newrelic_rpm'
-
-group :production do
-  gem 'unicorn'
-  gem 'pg'
-  gem 'rack-timeout'
-  gem 'rails_12factor'
-end
+gem 'unicorn'
+gem 'pg'
+gem 'rack-timeout'
+gem 'rails_12factor'

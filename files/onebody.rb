@@ -3,8 +3,8 @@
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
-  "https://github.com/#{repo_name}.git"
+repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+"https://github.com/#{repo_name}.git"
 end
 
 gem 'rails', '5.1.4'
@@ -62,36 +62,25 @@ gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 gem 'with_advisory_lock'
 
-group :test do
-  gem 'factory_girl_rails'
-  gem 'rails-controller-testing'
-  gem 'shoulda-matchers', github: 'thoughtbot/shoulda-matchers'
-  gem 'webmock'
-end
-
-group :development do
-  gem 'better_errors'
-  gem 'binding_of_caller'
-  gem 'capistrano'
-  gem 'capistrano-bundler'
-  gem 'capistrano-newrelic'
-  gem 'capistrano-rails'
-  gem 'capistrano-yarn'
-  gem 'observr'
-  gem 'terminal-notifier'
-end
-
-group :development, :test do
-  gem 'guard-rspec', require: false
-  gem 'pry'
-  gem 'pry-rails'
-  gem 'pry-remote'
-  gem 'rspec-rails'
-  gem 'spring'
-  gem 'spring-commands-rspec'
-  gem 'timecop'
-end
-
-group :production do
-  gem 'newrelic_rpm'
-end
+gem 'factory_girl_rails'
+gem 'rails-controller-testing'
+gem 'shoulda-matchers', github: 'thoughtbot/shoulda-matchers'
+gem 'webmock'
+gem 'better_errors'
+gem 'binding_of_caller'
+gem 'capistrano'
+gem 'capistrano-bundler'
+gem 'capistrano-newrelic'
+gem 'capistrano-rails'
+gem 'capistrano-yarn'
+gem 'observr'
+gem 'terminal-notifier'
+gem 'guard-rspec', require: false
+gem 'pry'
+gem 'pry-rails'
+gem 'pry-remote'
+gem 'rspec-rails'
+gem 'spring'
+gem 'spring-commands-rspec'
+gem 'timecop'
+gem 'newrelic_rpm'

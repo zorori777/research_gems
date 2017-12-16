@@ -40,45 +40,36 @@ gem 'jquery-turbolinks', '~> 1.0.0'
 gem 'jquery-rails'
 gem 'font-awesome-rails'
 
-group :development do
-  gem 'rspec-rails'
-  gem 'guard',            require: false
-  gem 'guard-rspec',      require: false
-  gem 'guard-bundler',    require: false
-  gem 'guard-livereload', require: false
-  gem 'spring'
-  gem 'spring-commands-rspec'
-  gem 'foreman'
-  gem 'quiet_assets'
-  gem 'pry-rails'
-  gem 'thin'
-  gem 'ruby_gntp'
-  gem 'rack-livereload'
-  gem 'parallel_tests'
-  gem 'better_errors'
-  gem 'binding_of_caller'
-end
-
-group :test do
-  gem 'capybara'
-  gem 'rspec'
-  gem 'growl'
-  gem 'rb-fsevent'
-  gem 'minitest' # https://github.com/thoughtbot/shoulda-matchers/issues/408
-  gem 'shoulda-matchers'
-  gem 'fabrication'
-  gem 'database_cleaner'
-  gem 'faker'
-  gem 'email_spec'
-  gem 'webmock'
-  gem 'fuubar'
-end
-
-group :production do
-  gem 'newrelic_rpm'
-  gem 'rails_12factor' # Heroku requires this
-end
-
+gem 'rspec-rails'
+gem 'guard',            require: false
+gem 'guard-rspec',      require: false
+gem 'guard-bundler',    require: false
+gem 'guard-livereload', require: false
+gem 'spring'
+gem 'spring-commands-rspec'
+gem 'foreman'
+gem 'quiet_assets'
+gem 'pry-rails'
+gem 'thin'
+gem 'ruby_gntp'
+gem 'rack-livereload'
+gem 'parallel_tests'
+gem 'better_errors'
+gem 'binding_of_caller'
+gem 'capybara'
+gem 'rspec'
+gem 'growl'
+gem 'rb-fsevent'
+gem 'minitest' # https://github.com/thoughtbot/shoulda-matchers/issues/408
+gem 'shoulda-matchers'
+gem 'fabrication'
+gem 'database_cleaner'
+gem 'faker'
+gem 'email_spec'
+gem 'webmock'
+gem 'fuubar'
+gem 'newrelic_rpm'
+gem 'rails_12factor' # Heroku requires this
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

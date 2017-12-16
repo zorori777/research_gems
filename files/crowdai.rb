@@ -101,56 +101,38 @@ gem "cells-rails", git: 'https://github.com/trailblazer/cells-rails'
 gem "cells"
 gem "cells-erb"
 gem 'record_tag_helper', '~> 1.0'
-
-
-group :development, :test do
-  gem "rspec-cells"
-end
-
-# static analysis
-group :development do
-  gem 'brakeman', :require => false
-  gem 'derailed_benchmarks'
-  gem 'stackprof'
-end
-
-
-group :development do
-  gem 'seed_dump'
-  gem 'guard'
-  gem 'rails-erd'
-  gem 'sdoc', '~> 0.4.0'
-  gem 'web-console'
-  gem 'scss_lint', require: false
-  gem 'shog'
-  gem 'meta_request'
-end
-
-
-group :development, :test do
-  gem 'byebug'
-  gem 'ffaker'
-  gem 'spring'
-  gem 'table_print'
-  gem 'rspec-rails', '~> 3.6'
-  gem 'rspec-kickstarter'
-  gem 'to_factory'
-  gem 'traceroute'
-end
-
-group :test do
-  gem "factory_girl_rails"
-  gem 'simplecov', :require => false
-  gem 'capybara'
-  gem 'capybara-email'
-  gem 'capybara-screenshot'
-  gem 'capybara-webkit', '1.12.0'
-  gem 'database_cleaner'
-  gem "launchy"
-  gem 'shoulda'
-  gem 'timecop'
-  gem 'shoulda-matchers', require: false
-  gem 'sanitize'
-  gem 'rails-controller-testing'
-  gem 'pundit-matchers', git: 'https://github.com/crowdAI/pundit-matchers'
-end
+gem "rspec-cells"
+gem 'brakeman', :require => false
+gem 'derailed_benchmarks'
+gem 'stackprof'
+gem 'seed_dump'
+gem 'guard'
+gem 'rails-erd'
+gem 'sdoc', '~> 0.4.0'
+gem 'web-console'
+gem 'scss_lint', require: false
+gem 'shog'
+gem 'meta_request'
+gem 'model_2_factory-rails'
+gem 'byebug'
+gem 'ffaker'
+gem 'spring'
+gem 'table_print'
+gem 'rspec-rails', '~> 3.6'
+gem 'rspec-kickstarter'
+gem 'to_factory'
+gem 'traceroute'
+gem "factory_girl_rails"
+gem 'simplecov', :require => false
+gem 'capybara'
+gem 'capybara-email'
+gem 'capybara-screenshot'
+gem 'capybara-webkit', '1.12.0'
+gem 'database_cleaner'
+gem "launchy"
+gem 'shoulda'
+gem 'timecop'
+gem 'shoulda-matchers', require: false
+gem 'sanitize'
+gem 'rails-controller-testing'
+gem 'pundit-matchers', git: 'https://github.com/crowdAI/pundit-matchers'

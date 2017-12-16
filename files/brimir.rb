@@ -23,26 +23,17 @@ gem 'pry', "~> 0.10", group: [:development, :test]
 # We need this to not break the test suite as `assigns` and `assert_template` have been remove and extracted to a gem in Rails 5
 gem 'rails-controller-testing', group: [:test]
 
+gem 'spring', "~> 2.0"
 
-group :development do
-  # Spring application pre-loader
-  gem 'spring', "~> 2.0"
+# open sent emails in the browser
+gem 'letter_opener', "~> 1.4"
+# for travis-ci
+gem 'rake', "~> 12.0"
 
-  # open sent emails in the browser
-  gem 'letter_opener', "~> 1.4"
-end
+# for coveralls
+gem 'coveralls', "~> 0.8"
 
-group :test do
-  # for travis-ci
-  gem 'rake', "~> 12.0"
-
-  # for coveralls
-  gem 'coveralls', "~> 0.8"
-
-  gem 'timecop', "~> 0.8"
-end
-
-# Optional PostgreSQL for production
+gem 'timecop', "~> 0.8"
 gem 'pg', "~> 0.19", group: :postgresql
 # Optional MySQL for production
 gem 'mysql2', "~> 0.4", group: :mysql
@@ -99,8 +90,6 @@ gem 'trix', "~> 0.10", ">= 0.10.1"
 gem 'react-rails', "~> 1.10"
 
 # Capistrano for deployment
-group :development do
-  gem 'capistrano', '~> 3.8'
-  gem 'capistrano-rails', require: false
-  gem 'capistrano-bundler', require: false
-end
+gem 'capistrano', '~> 3.8'
+gem 'capistrano-rails', require: false
+gem 'capistrano-bundler', require: false

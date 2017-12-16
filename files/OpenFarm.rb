@@ -48,61 +48,49 @@ gem 'active_model_serializers'
 # Asset management using bower
 # https://rails-assets.org/
 source 'https://rails-assets.org' do
-  gem 'rails-assets-jquery', '~> 2.2.1'
-  gem 'rails-assets-jquery-ui', '~> 1.11.4'
-  gem 'rails-assets-angular', '~> 1.5.0'
-  gem 'rails-assets-angular-sanitize', '~> 1.5.0'
-  gem 'rails-assets-angular-dragdrop', '~> 1.0.13'
-  gem 'rails-assets-angular-foundation', '~> 0.8.0'
-  gem 'rails-assets-angular-ui-sortable', '~> 0.13.4'
-  gem 'rails-assets-angular-local-storage', '~> 0.2.3'
-  gem 'rails-assets-angular-typeahead', '~> 0.3.1'
-  gem 'rails-assets-ng-tags-input', '~>2.3.0'
-  gem 'rails-assets-ng-file-upload', '~>12.2.13'
-  gem 'rails-assets-moment', '~>2.8.3'
-  gem 'rails-assets-showdown', '~>0.5.4'
+gem 'rails-assets-jquery', '~> 2.2.1'
+gem 'rails-assets-jquery-ui', '~> 1.11.4'
+gem 'rails-assets-angular', '~> 1.5.0'
+gem 'rails-assets-angular-sanitize', '~> 1.5.0'
+gem 'rails-assets-angular-dragdrop', '~> 1.0.13'
+gem 'rails-assets-angular-foundation', '~> 0.8.0'
+gem 'rails-assets-angular-ui-sortable', '~> 0.13.4'
+gem 'rails-assets-angular-local-storage', '~> 0.2.3'
+gem 'rails-assets-angular-typeahead', '~> 0.3.1'
+gem 'rails-assets-ng-tags-input', '~>2.3.0'
+gem 'rails-assets-ng-file-upload', '~>12.2.13'
+gem 'rails-assets-moment', '~>2.8.3'
+gem 'rails-assets-showdown', '~>0.5.4'
 end
 
-group :development, :test do
-  gem 'coveralls', require: false
-  gem 'quiet_assets'
-  gem 'better_errors'
-  gem 'rspec-rails'
-  gem 'pry'
-  gem 'pry-nav'
-  gem 'launchy'
-  gem 'factory_girl_rails'
-  gem 'faker'
-  gem 'binding_of_caller'
-end
-
-group :test do
-  gem 'test-unit'
-  gem 'smarf_doc'
-  gem 'capybara'
-  gem 'capybara-angular'
-  gem 'poltergeist'
-  gem 'phantomjs', '>= 1.8.1', :require => 'phantomjs/poltergeist'
-  gem 'simplecov'
-  gem 'database_cleaner', '~> 1.3.0'
-  gem 'vcr'
-  gem 'webmock'
-end
-
-group :development do
-  gem 'rubocop', '~> 0.49.0'
-  gem 'rainbow', '~> 2.1.0' # https://github.com/sickill/rainbow/issues/48
-  gem "letter_opener"
-end
-
-group :production, :staging do
-  gem 'thin'
-  gem 'exception_notification'
-  gem 'rails_12factor'
-  # https://github.com/heroku/rack-timeout
-  gem 'rack-timeout'
-end
-
+gem 'coveralls', require: false
+gem 'quiet_assets'
+gem 'better_errors'
+gem 'rspec-rails'
+gem 'pry'
+gem 'pry-nav'
+gem 'launchy'
+gem 'factory_girl_rails'
+gem 'faker'
+gem 'binding_of_caller'
+gem 'test-unit'
+gem 'smarf_doc'
+gem 'capybara'
+gem 'capybara-angular'
+gem 'poltergeist'
+gem 'phantomjs', '>= 1.8.1', :require => 'phantomjs/poltergeist'
+gem 'simplecov'
+gem 'database_cleaner', '~> 1.3.0'
+gem 'vcr'
+gem 'webmock'
+gem 'rubocop', '~> 0.49.0'
+gem 'rainbow', '~> 2.1.0' # https://github.com/sickill/rainbow/issues/48
+gem "letter_opener"
+gem 'thin'
+gem 'exception_notification'
+gem 'rails_12factor'
+# https://github.com/heroku/rack-timeout
+gem 'rack-timeout'
 #Used for static pages in /app/views/pages
 gem 'high_voltage'
 
@@ -111,6 +99,6 @@ gem 'rails_admin', '~> 1.1.1'
 gem 'ng-rails-csrf'
 
 # LETSENCRYPT
-gem 'platform-api' 
+gem 'platform-api'
 
 gem 'letsencrypt-rails-heroku', group: 'production'

@@ -37,9 +37,9 @@ gem 'flying-sphinx', '~> 1.2.0'
 # Use patched v2.0.2
 # Fixes issues: Create a new delayed delta job if there is an existing delta job which has failed
 gem 'ts-delayed-delta',
-  :git    => 'https://github.com/pat/ts-delayed-delta.git',
-  :branch => 'master',
-  :ref    => '0aef2195f3acc1da048f18bc0191c90538565705'
+:git    => 'https://github.com/pat/ts-delayed-delta.git',
+:branch => 'master',
+:ref    => '0aef2195f3acc1da048f18bc0191c90538565705'
 gem 'possibly', '~> 1.0.1'
 
 gem 'delayed_job', '~> 4.1.3'
@@ -58,9 +58,9 @@ gem 'money-rails', '~> 1.8.0'
 
 # Modified version with Rails 5 fixes
 gem 'mercury-rails',
-  git: 'https://github.com/ithouse/mercury.git',
-  branch: 'master',
-  ref: '1a9d4ac5a0a5fd0d459ff1986f9f05e617415b16'
+git: 'https://github.com/ithouse/mercury.git',
+branch: 'master',
+ref: '1a9d4ac5a0a5fd0d459ff1986f9f05e617415b16'
 
 gem 'countries', '~> 2.0.8'
 gem "mail_view", '~> 2.0.4'
@@ -100,60 +100,41 @@ gem "request_store", '~> 1.3.2'
 # ActionMailer dependency that needs forced update for security patch
 gem 'mail', '~> 2.6.6.rc1'
 
-group :staging, :production do
-  gem 'newrelic_rpm', '~> 4.2.0.334'
-  gem 'rails_12factor', '~> 0.0.3'
-end
+gem 'newrelic_rpm', '~> 4.2.0.334'
+gem 'rails_12factor', '~> 0.0.3'
+gem 'rubocop', '~> 0.49.1', require: false
+gem 'factory_girl_rails', '~> 4.8.0'
+gem 'meta_request', '~> 0.4.3'
+gem 'rb-fsevent', '~> 0.9.8', require: false
+gem 'guard-rspec', '~> 4.7.3', require: false
+gem 'listen', '~> 3.1.5'
+gem 'annotate', '~> 2.7.1'
+gem 'zeus', '~> 0.15.13', require: false
+gem 'better_errors', '~> 2.1.1'
+gem 'web-console', '~> 3.5.1'
+gem 'awesome_print', '~> 1.7.0'
+gem 'binding_of_caller'
+gem 'capybara', '~> 2.6.2'
+gem "rspec-rails", '~> 3.6.0'
 
-group :development, :test do
-  gem 'rubocop', '~> 0.49.1', require: false
-  gem 'factory_girl_rails', '~> 4.8.0'
-end
+gem 'cucumber-rails', '~> 1.5.0', require: false # require: false is needed for cucumber-rails
 
-group :development, :staging do
-  gem 'meta_request', '~> 0.4.3'
-end
+gem 'selenium-webdriver', '~> 2.53.4'
 
-group :development do
-  gem 'rb-fsevent', '~> 0.9.8', require: false
-  gem 'guard-rspec', '~> 4.7.3', require: false
-  gem 'listen', '~> 3.1.5'
-  gem 'annotate', '~> 2.7.1'
-  gem 'zeus', '~> 0.15.13', require: false
-  gem 'better_errors', '~> 2.1.1'
-  gem 'web-console', '~> 3.5.1'
-  gem 'awesome_print', '~> 1.7.0'
-  gem 'binding_of_caller'
-end
+# Launchy is needed by Capybara, e.g. save_and_open command needs Launchy to open a browser
+gem 'launchy', '~> 2.1'
+gem 'email_spec', '~> 2.1.1'
+gem 'timecop', '~> 0.8.1'
+gem 'rack-test', '~> 0.6.3'
+gem 'database_cleaner', '~> 1.6.1'
+gem 'connection_pool', '~> 2.2.1'
+gem 'rails-controller-testing', '~> 1.0.2'
 
-group :test do
-  gem 'capybara', '~> 2.6.2'
-  gem "rspec-rails", '~> 3.6.0'
+# required for CircleCI automatic test balancing
+gem 'rspec_junit_formatter'
 
-  gem 'cucumber-rails', '~> 1.5.0', require: false # require: false is needed for cucumber-rails
-
-  gem 'selenium-webdriver', '~> 2.53.4'
-
-  # Launchy is needed by Capybara, e.g. save_and_open command needs Launchy to open a browser
-  gem 'launchy', '~> 2.1'
-  gem 'email_spec', '~> 2.1.1'
-  gem 'timecop', '~> 0.8.1'
-  gem 'rack-test', '~> 0.6.3'
-  gem 'database_cleaner', '~> 1.6.1'
-  gem 'connection_pool', '~> 2.2.1'
-  gem 'rails-controller-testing', '~> 1.0.2'
-
-  # required for CircleCI automatic test balancing
-  gem 'rspec_junit_formatter'
-
-  gem 'fake_stripe'
-end
-
-group :development, :test do
-  gem 'pry-byebug'
-end
-
-
+gem 'fake_stripe'
+gem 'pry-byebug'
 gem 'therubyracer', '~> 0.12.3', platforms: :ruby
 gem 'js-routes', '~> 1.3.3'
 

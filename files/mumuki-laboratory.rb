@@ -17,10 +17,10 @@ gem 'execjs'
 gem 'jquery-rails'
 
 source 'https://rails-assets.org' do
-  gem 'rails-assets-dev-awesome', '0.4.1'
-  gem 'rails-assets-awesome-bootstrap-checkbox'
-  gem 'rails-assets-momentjs'
-  gem 'rails-assets-mumuki-styles', '1.8.0'
+gem 'rails-assets-dev-awesome', '0.4.1'
+gem 'rails-assets-awesome-bootstrap-checkbox'
+gem 'rails-assets-momentjs'
+gem 'rails-assets-mumuki-styles', '1.8.0'
 end
 
 
@@ -34,12 +34,12 @@ gem 'font-awesome-rails', '~> 4.7'
 gem 'nprogress-rails'
 
 gem 'mumukit-content-type',
-    git: 'https://github.com/mumuki/mumukit-content-type',
-    require: 'mumukit/content_type',
-    ref: 'v1.0.0-mumuki-rouge'
+git: 'https://github.com/mumuki/mumukit-content-type',
+require: 'mumukit/content_type',
+ref: 'v1.0.0-mumuki-rouge'
 gem 'rouge',
-    git: 'https://github.com/mumuki/rouge',
-    ref: '5a8db3387f3a67232569969cd3da40ee04eb9dc3'
+git: 'https://github.com/mumuki/rouge',
+ref: '5a8db3387f3a67232569969cd3da40ee04eb9dc3'
 
 gem 'mumukit-auth', '~> 7.1'
 gem 'mumukit-core', '~> 1.1'
@@ -52,25 +52,19 @@ gem 'mumukit-login', '~> 4.0'
 gem 'rack', '~> 2.0'
 gem 'omniauth', '~> 1.4.0'
 
-group :test do
-  gem 'rspec-rails', '~> 3.6'
-  gem 'factory_bot_rails'
-  gem 'rake', '10.4.2'
-  gem 'faker', '~> 1.5'
-  gem 'capybara', '~> 2.3.0'
-end
-
-group :development do
-  gem 'pry'
-  gem 'pry-rails'
-  gem 'pry-remote'
-  gem 'pry-byebug' unless Gem.win_platform?
-  gem 'pry-stack_explorer'
-  gem 'binding_of_caller'
-  gem 'i18n-tasks', '~> 0.8.3'
-  gem 'web-console'
-end
-
+gem 'rspec-rails', '~> 3.6'
+gem 'factory_bot_rails'
+gem 'rake', '10.4.2'
+gem 'faker', '~> 1.5'
+gem 'capybara', '~> 2.3.0'
+gem 'pry'
+gem 'pry-rails'
+gem 'pry-remote'
+gem 'pry-byebug' unless Gem.win_platform?
+gem 'pry-stack_explorer'
+gem 'binding_of_caller'
+gem 'i18n-tasks', '~> 0.8.3'
+gem 'web-console'
 gem 'codeclimate-test-reporter', :group => :test, :require => nil
 
 gem 'sitemap_generator'

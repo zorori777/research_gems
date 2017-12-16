@@ -50,29 +50,18 @@ gem 'rack-attack'
 gem 'lograge'
 gem 'logstash-event'
 
-group :development, :test do
-  gem 'rubocop', require: false
-  gem 'toxiproxy', '~> 1.0.0'
-end
-
-group :development do
-  gem 'bootsnap', require: false
-  gem 'rails-erd'
-end
-
-group :test do
-  gem 'minitest', require: false
-  gem 'capybara'
-  gem 'factory_girl_rails'
-  gem 'launchy'
-  gem 'rack-test', require: 'rack/test'
-  gem 'mocha', require: false
-  gem 'bourne', require: false
-  gem 'shoulda', require: false
-end
-
-group :development, :deploy do
-  gem 'capistrano', '~> 3.0', require: false
-  gem 'capistrano-rails', '~> 1.1', require: false
-  gem 'capistrano-bundler', '~> 1.1', require: false
-end
+gem 'rubocop', require: false
+gem 'toxiproxy', '~> 1.0.0'
+gem 'bootsnap', require: false
+gem 'rails-erd'
+gem 'minitest', require: false
+gem 'capybara'
+gem 'factory_girl_rails'
+gem 'launchy'
+gem 'rack-test', require: 'rack/test'
+gem 'mocha', require: false
+gem 'bourne', require: false
+gem 'shoulda', require: false
+gem 'capistrano', '~> 3.0', require: false
+gem 'capistrano-rails', '~> 1.1', require: false
+gem 'capistrano-bundler', '~> 1.1', require: false

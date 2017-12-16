@@ -37,27 +37,18 @@ gem 'ahoy_matey'
 gem 'riiif'
 gem 'iiif-presentation', git: 'https://github.com/benwbrum/osullivan', branch: 'service_is_array'
 
-group :assets do
-  gem 'therubyracer'
-  gem 'uglifier'
-end
+gem 'therubyracer'
+gem 'uglifier'
+gem 'database_cleaner'
+gem 'capybara'
+gem 'shoulda'
+gem 'rspec-rails'
+gem 'launchy'
+gem 'capybara-webkit'
 
-group :test do
-  gem 'database_cleaner'
-  gem 'capybara'
-  gem 'shoulda'
-end
-
-group :development, :test do
-  gem 'rspec-rails'
-  gem 'launchy'
-  gem 'capybara-webkit'
-
-  # Supporting gem for RailsPanel
-  # https://github.com/dejan/rails_panel
-  gem 'meta_request'
-end
-
+# Supporting gem for RailsPanel
+# https://github.com/dejan/rails_panel
+gem 'meta_request'
 # Use SASS for stylesheets
 gem 'sass-rails', '~> 5.0.0'
 

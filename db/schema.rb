@@ -14,8 +14,10 @@ ActiveRecord::Schema.define(version: 20171208165513) do
 
   create_table "gem_lists", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
     t.string "name"
+    t.bigint "repository_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["repository_id"], name: "index_gem_lists_on_repository_id"
   end
 
   create_table "repositories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
@@ -24,4 +26,5 @@ ActiveRecord::Schema.define(version: 20171208165513) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "gem_lists", "repositories"
 end
